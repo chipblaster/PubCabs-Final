@@ -15,7 +15,12 @@ class CreateSubAboutsTable extends Migration
     {
         Schema::create('sub_abouts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('about_id')->unsigned()->index();
+            $table->string('title');
+            $table->text('description');
             $table->timestamps();
+
+            $table->foreign('about_id')->references('id')->on('abouts');
         });
     }
 

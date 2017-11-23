@@ -15,7 +15,14 @@ class CreateSubscribesTable extends Migration
     {
         Schema::create('subscribes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('phone');
+            $table->integer('country_id')->unsigned()->index();
             $table->timestamps();
+
+            $table->foreign('country_id')->references('id')->on('countries');
         });
     }
 
