@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
 Auth::routes();
@@ -29,3 +29,11 @@ Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm'
 Route::get('/secret/pubcabs','HomeController@admin_login');
 Route::post('/secret/pubcabs/','HomeController@post_admin_login')->name('admin_login');
 
+
+/**
+ *  Site Page Routes
+ */
+Route::get('/','Frontend\IndexController@index')->name('index');
+Route::get('/about','Frontend\IndexController@about')->name('about');
+// Route::get('/drivers','Frontend\IndexController@drivers')->name('drivers');
+Route::get('/contact','Frontend\IndexController@contact')->name('contact');
