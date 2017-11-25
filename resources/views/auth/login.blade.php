@@ -1,38 +1,162 @@
-<!doctype html><html lang="en">
-<!-- Mirrored from spantags.com/luxury/leftbar/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2017 19:43:38 GMT -->
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from coderthemes.com/uplon/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Oct 2017 08:03:45 GMT -->
 <head>
-<meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Login</title>
-<meta name="description" content="Luxury is a premium adman dashboard template based on bootstrap">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
-<link rel="apple-touch-icon" href="apple-touch-icon.html"><!-- core plugins -->
-<link rel="stylesheet" href="http://spantags.com/luxury/assets/vendor/css/bootstrap.css">
-<link rel="stylesheet" href="http://spantags.com/luxury/assets/vendor/bower_components/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="http://spantags.com/luxury/assets/vendor/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.css"><!-- core plugins --><!-- plugins for the current page -->
-<link rel="stylesheet" href="http://spantags.com/luxury/assets/vendor/owl-carousel/owl.carousel.css"><!-- / plugins for the current page --><!-- site-wide stylesheets -->
-<link rel="stylesheet" href="css/site.css"><!-- / site-wide stylesheets --><!-- styles for the current page -->
-<link rel="stylesheet" href="http://spantags.com/luxury/assets/examples/css/pages/login.css"><!-- / styles for the current page -->
-<style>@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,600';</style></head><body class="simple-page page-login"><!--[if lt IE 10]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-<header class="login-page-header d-flex"><div class="mr-auto"><a href="#" class="d-flex align-items-center"><svg class="flip-y mr-2" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32"><path fill="#ffffff" d="M30.063 2.585c-.253-1.023-.758-1.754-1.5-2.17-3.28-1.842-9.02 3.577-11.05 6.88-.65 1.06-1.275 2.358-1.792 3.718-1.486-.21-2.95-.098-4.366.337C6.954 12.694 4 16.975 4 22v2c0 4.337 3.663 8 8 8h1.98c5.31 0 9.803-3.664 10.682-8.714.33-1.89.142-3.807-.54-5.585 1.26-1.2 2.43-2.587 3.268-3.886 1.646-2.554 3.46-8.062 2.673-11.23zM12 23c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/><path data-color="color-2" fill="#39527b" d="M10.77 9.437c1.14-.35 2.32-.527 3.506-.527h.148c.424-.954.888-1.846 1.37-2.633-1.106-2.466-2.56-4.72-4.01-5.71-.7-.477-1.387-.656-2.04-.528-.442.086-1.08.37-1.594 1.23C7 3.19 6.89 7.465 7.457 11.06c1-.7 2.108-1.255 3.312-1.623z"/></svg><h5 class="text-white m-0">Luxury</h5></a></div><div id="form-switch-btns" class="btn-group switch-btns">
-</header><!-- /.login-page-header -->
-<div class="login-page-wrap">
-    <div class="side first-side">
-    </div><!-- /.first-side -->
-    <div class="side second-side"><div class="side-content">
-    <div id="signin-form-wrap" class="form-wrap show">
-    <h4 class="my-5 font-weight-light text-uppercase">Sing In</h4>
-    <form id="signin-form" class="form" action="{{route('admin_login')}}" method="post">
-        {{csrf_field()}}
-        <div class="form-group">
-            <input type="email" class="form-control" placeholder="Your Email" name="email">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" placeholder="Your password" name="password">
-        </div>
-        <input type="submit" class="btn btn-outline-success py-2 mt-5" style="width: 200px" value="Sign in">
-    </form>
-</div><!-- /#signin-form-wrap -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
 
-</div><!-- /.side-content --></div><!-- /.second-side --></div><!-- /.login-page-wrap --><!-- core plugins --><script src="http://spantags.com/luxury/assets/vendor/bower_components/jquery/dist/jquery.min.js"></script><script src="http://spantags.com/luxury/assets/vendor/bower_components/tether/dist/js/tether.min.js"></script><script src="http://spantags.com/luxury/assets/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js"></script><!-- plugins for the current page --><script src="http://spantags.com/luxury/assets/vendor/owl-carousel/owl.carousel.min.js"></script><!-- / plugins for the current page --><!-- scripts for the current page --><script src="http://spantags.com/luxury/assets/examples/js/pages/login.js"></script><!-- / scripts for the current page--></body>
-<!-- Mirrored from spantags.com/luxury/leftbar/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2017 19:43:38 GMT -->
+        <!-- App Favicon -->
+        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+
+        <!-- App title -->
+        <title>Uplon - Responsive Admin Dashboard Template</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+
+        <!-- App CSS -->
+        <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+
+        <!-- Modernizr js -->
+        <script src="{{asset('assets/js/modernizr.min.js')}}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79190402-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+
+
+    <body>
+
+        <div class="account-pages"></div>
+        <div class="clearfix"></div>
+        <div class="wrapper-page">
+
+            <div class="account-bg">
+                <div class="card-box mb-0">
+                    <div class="text-center m-t-20">
+                        <a href="index.html" class="logo">
+                            <i class="zmdi zmdi-group-work icon-c-logo"></i>
+                            <span>Uplon</span>
+                        </a>
+                    </div>
+                    <div class="m-t-10 p-20">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h6 class="text-muted text-uppercase m-b-0 m-t-0">Sign In</h6>
+                            </div>
+                        </div>
+                        <form class="m-t-20" action="{{route('post_admin')}}" method="POST">
+                           {{csrf_field()}}
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input class="form-control" type="email" name="email" required="" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input class="form-control" type="password" name="password" required="" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <div class="checkbox checkbox-custom">
+                                        <input id="checkbox-signup" type="checkbox">
+                                        <label for="checkbox-signup">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group text-center row m-t-10">
+                                <div class="col-12">
+                                    <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Log In</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group row m-t-30 mb-0">
+                                <div class="col-12">
+                                    <a href="pages-recoverpw.html" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group row m-t-30 mb-0">
+                                <div class="col-12 text-center">
+                                    <h5 class="text-muted"><b>Sign in with</b></h5>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-0 text-center">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-facebook waves-effect font-14 waves-light m-t-20">
+                                       <i class="fa fa-facebook m-r-5"></i> Facebook
+                                    </button>
+
+                                    <button type="button" class="btn btn-twitter waves-effect font-14 waves-light m-t-20">
+                                       <i class="fa fa-twitter m-r-5"></i> Twitter
+                                    </button>
+
+                                    <button type="button" class="btn btn-googleplus waves-effect font-14 waves-light m-t-20">
+                                       <i class="fa fa-google-plus m-r-5"></i> Google+
+                                    </button>
+                                </div>
+                            </div> -->
+
+                        </form>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- end card-box-->
+
+            <div class="m-t-20">
+                <div class="text-center">
+                    <p class="text-white">Don't have an account? <a href="pages-register.html" class="text-white m-l-5"><b>Sign Up</b></a></p>
+                </div>
+            </div>
+
+        </div>
+        <!-- end wrapper page -->
+
+
+        <script>
+            var resizefunc = [];
+        </script>
+
+        <!-- jQuery  -->
+        <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/js/popper.min.js')}}"></script><!-- Tether for Bootstrap -->
+        <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('assets/js/detect.js')}}"></script>
+        <script src="{{asset('assets/js/fastclick.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.blockUI.js')}}"></script>
+        <script src="{{asset('assets/js/waves.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.nicescroll.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.scrollTo.min.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
+        <script src="{{asset('assets/plugins/switchery/switchery.min.js')}}"></script>
+
+        <!-- App js -->
+        <script src="{{asset('assets/js/jquery.core.js')}}"></script>
+        <script src="assets/js/jquery.app.js')}}"></script>
+
+    </body>
+
+<!-- Mirrored from coderthemes.com/uplon/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Oct 2017 08:03:45 GMT -->
 </html>

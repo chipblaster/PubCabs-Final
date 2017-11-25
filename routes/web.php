@@ -17,23 +17,26 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/login','HomeController@error');
-Route::get('/login','HomeController@error')->name('login');
-Route::get('/register','HomeController@error');
+Route::get('/home', 'WebController@index')->name('home');
+Route::post('/login','WebController@error');
+Route::get('/login','WebController@error')->name('login');
+Route::get('/register','WebController@error');
 Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->middleware('auth');
 
 /**
  *   Custom  routes for admin
  */
-Route::get('/secret/pubcabs','HomeController@admin_login');
-Route::post('/secret/pubcabs/','HomeController@post_admin_login')->name('admin_login');
-
+Route::get('/secret/pubcabs','WebController@admin_login');
+Route::post('/secret/pubcabs/','WebController@post_admin')->name('post_admin');
 
 /**
  *  Site Page Routes
  */
 Route::get('/','Frontend\IndexController@index')->name('index');
 Route::get('/about','Frontend\IndexController@about')->name('about');
-// Route::get('/drivers','Frontend\IndexController@drivers')->name('drivers');
 Route::get('/contact','Frontend\IndexController@contact')->name('contact');
+
+/**
+ *  Admin page routes
+ */
+Route::get('/dasboard','Backend\AdminController@index')->name('admin');
