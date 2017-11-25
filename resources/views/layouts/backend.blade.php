@@ -69,7 +69,6 @@
                                 <div class="dropdown-item noti-title">
                                     <h5 class="text-overflow"><small>Welcome ! Admin</small> </h5>
                                 </div>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <i class="zmdi zmdi-power"></i> <span>Logout</span>
@@ -102,16 +101,35 @@
                         <ul>
                             <li class="text-muted menu-title">Navigation</li>
                             <li class="has_sub">
-                                <a href="index.html" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i><span> Country </span> </a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Subscribes</span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="ui-cards.html">List</a></li>
+                                </ul>
                             </li>
+
                             <li class="has_sub">
-                                <a href="index.html" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i><span> About </span> </a>
-                            </li>
-                           <li class="has_sub">
-                                <a href="index.html" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i><span> Contact </span> </a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> Contact </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="components-grid.html">Add Contact Detail</a></li>
+                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
+                                    <li><a href="components-sweet-alert.html">List</a></li>
+                                </ul>
                             </li>
                              <li class="has_sub">
-                                <a href="index.html" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i><span> Subscribes </span> </a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> About </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="components-grid.html">Add About Detail</a></li>
+                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
+                                    <li><a href="components-sweet-alert.html">List</a></li>
+                                </ul>
+                            </li>
+                              <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-widgets"></i> <span> Social </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="components-grid.html">Add Social Detail</a></li>
+                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
+                                    <li><a href="components-sweet-alert.html">List</a></li>
+                                </ul>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
