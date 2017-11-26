@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
-<!-- Mirrored from coderthemes.com/uplon/vertical/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Oct 2017 08:02:51 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,16 +26,6 @@
 
         <!-- Modernizr js -->
         <script src="{{asset('assets/js/modernizr.min.js')}}"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-79190402-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 
     </head>
@@ -60,10 +48,10 @@
                 <nav class="navbar-custom">
                     <ul class="list-inline float-right mb-0">
                         <li class="list-inline-item dropdown notification-list">
-                            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
-                               aria-haspopup="false" aria-expanded="false">
-                                <img src="{{asset('assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle">
-                            </a>
+                            {{--<a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"--}}
+                               {{--aria-haspopup="false" aria-expanded="false">--}}
+                                {{--<img src="{{asset('assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle">--}}
+                            {{--</a>--}}
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
@@ -84,7 +72,7 @@
                                 <i class="zmdi zmdi-menu"></i>
                             </button>
                         </li>
-                       
+
                     </ul>
 
                 </nav>
@@ -99,7 +87,6 @@
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
                         <ul>
-                            <li class="text-muted menu-title">Navigation</li>
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Subscribes</span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
@@ -108,9 +95,9 @@
                             </li>
 
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> Contact </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> Content </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="components-grid.html">Add Contact Detail</a></li>
+                                    <li><a href="{{route('contact.index')}}">Contact</a></li>
                                     <li><a href="components-range-sliders.html">Edit Details</a></li>
                                     <li><a href="components-sweet-alert.html">List</a></li>
                                 </ul>
@@ -144,7 +131,7 @@
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->
-           
+
                 @yield('content');
 
             <!-- ============================================================== -->
@@ -152,7 +139,7 @@
             <!-- ============================================================== -->
 
 
-           
+
 
             <footer class="footer text-right">
                 2016 - 2017 © Uplon.
@@ -193,6 +180,4 @@
         <script src="{{asset('assets/js/jquery.app.js')}}"></script>
 
     </body>
-
-<!-- Mirrored from coderthemes.com/uplon/vertical/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Oct 2017 08:02:58 GMT -->
 </html>

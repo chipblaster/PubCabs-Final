@@ -15,7 +15,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contact = Contact::all()->first();
+        return view('backend.contact.index',compact('contact'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
