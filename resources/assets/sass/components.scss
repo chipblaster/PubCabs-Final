@@ -1,0 +1,90 @@
+#components{
+height: 700px;
+width: 100%;
+.allbuttons{
+    height: 400px;
+    box-sizing: border-box;
+    padding: 30px;
+
+    // btnall2
+.btnAllTwo{
+    background-color: #ffd800;
+    color: #333;
+    border-radius: 0;
+    border: 1px solid transparent;
+    font-weight: 300;
+    font-family: Poppins;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-family: poppins;
+    font-weight: 200;
+    &:hover{
+        border: 1px solid black;
+        background: transparent;
+        color: #ffd800;
+ 
+    
+
+    }
+}
+
+// btnall3
+.btnAllThree{
+    background-color: #ffd800;
+    color: #333;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 300;
+    font-family: Poppins;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 17px;
+    font-family: poppins;
+    font-weight: 200;
+    transition: all .7s ease;
+    &:hover{
+        border: 1px solid black;
+        background: transparent;
+        color: #ffd800;
+    transition: all .7s ease;
+    
+ 
+    
+
+    }
+}
+.btnAllFour{
+    background-color: #ffd800;
+    color: #333;
+    border-radius: 10px;
+    border: 1px solid transparent;
+ 
+
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 17px;
+    font-family: poppins;
+    font-weight: 200;
+    transition: all .7s ease;
+    &:hover{
+        border: 1px solid black;
+        background: transparent;
+        color: #ffd800;
+    transition: all .7s ease;
+    box-shadow: 0px 5px 5px 0px;
+    
+ 
+    
+
+    }
+}
+
+}
+// ACCORDIONS
+
+
+// accordion2
+
+
+}

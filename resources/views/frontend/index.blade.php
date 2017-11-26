@@ -1,6 +1,4 @@
-
-
-@extends('layouts.frontend');
+@extends('layouts.frontend')
 @section('content')
 <!-- SLOGAN BEGIN -->
 <section id="content"  style="background-image :url(./assets/images/4.jpg);background-repeat:no-repeat;">
