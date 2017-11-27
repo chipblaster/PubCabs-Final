@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,6 +131,14 @@
         </div>
     </div>
 </section>
+=======
+@include('frontend.partials.header')
+<body>
+
+
+ @yield('content')
+
+>>>>>>> b4283264c9d194dddf634b6a862fc1e61255b76c
 </body>
 </html>
 <script>
