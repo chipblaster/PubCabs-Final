@@ -1,0 +1,32 @@
+@import 'content';
+@import 'logo';
+@import 'Sresponsive';
+@import 'passengerAbout';
+@import 'navbar';
+@import 'Eresponsive';
+@import 'aboutUs';
+@import 'driverAbout';
+@import 'contactUs';
+@import 'contactUsForm';
+@import 'About';
+@import 'About__info';
+@import 'footer';
+@import 'driversUs';
+@import 'parts';
+@import 'components';
+
+.no_1{ 
+    
+    background:#ffd800;
+    color: #333;
+&:hover
+{ 
+    background:#333;
+color:#ffd800;
+
+}
+}
+.no_2{
+    background:#26c281;
+    color: #fff;
+}

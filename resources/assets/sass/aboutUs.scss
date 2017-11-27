@@ -1,0 +1,29 @@
+#aboutUs{
+   
+    .aboutUsInfo{
+        min-height: 350px;
+        background: #26c281;
+        box-sizing: border-box;
+        padding: 35px;
+        h3{
+            color: white;
+            margin-bottom: 5%;
+        }
+        p{
+            color: white;
+            margin-bottom: 10%;
+        }
+
+        
+    }
+    .aboutUsImage{
+        min-height: 350px;
+        background-repeat:no-repeat !important;
+        background-size:cover !important; 
+
+        
+    }
+    .nopadding{
+        padding: 0 !important;
+    }
+}

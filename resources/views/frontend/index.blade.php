@@ -1,7 +1,7 @@
-
-
-@extends('layouts.frontend');
+@extends('layouts.frontend')
+@section('title','Index')
 @section('content')
+    @include('frontend.partials.menu')
 <!-- SLOGAN BEGIN -->
 <section id="content"  style="background-image :url(./assets/images/4.jpg);background-repeat:no-repeat;">
   <div class="container">
@@ -142,12 +142,12 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
           <div class="aboutUsInfo">
             <h3>About Us</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea doloremque nesciunt sapiente pariatur porro reiciendis, corrupti et asperiores neque quia natus molestias expedita in a? Aut voluptate aspernatur maiores sequi.</p>
-            <a href="" class="btnAll">Learn More</a>
+              <p>{{substr($about->description,0,221)}}</p>
+            <a href="{{route('about')}}" class="btnAll">Learn More</a>
           </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
-          <div class="aboutUsImage" style="background:url(./assets/images/image2.jpg);">
+          <div class="aboutUsImage" style="background:url({{asset('assets/images/'.$about->banner_img)}});">
 
           </div>
         </div>
@@ -205,4 +205,5 @@
   </div>
   <div class="clearfix"></div>
 </section>
+@include('frontend.partials.footer')
 @endsection

@@ -32,16 +32,13 @@ Route::post('/secret/pubcabs/','WebController@post_admin')->name('post_admin');
 /**
  *  Site Page Routes
  */
-Route::get('/','Frontend\IndexController@index')->name('index');
-Route::get('/about','Frontend\IndexController@about')->name('about');
-Route::get('/contact','Frontend\IndexController@contact')->name('contact');
+
+include __DIR__.'/frontend/web.php';
 
 /**
  *  Admin page routes
  */
-Route::group(['prefix' => 'admin','middleware' => 'auth'],function (){
-Route::get('/dasboard','Backend\AdminController@index')->name('admin');
-Route::resource('/contact','Backend\ContactController');
-Route::resource('/about','Backend\AboutController');
-Route::resource('/subscribes','Backend\SubscribesController');
+
+Route::group(['middleware' => 'auth','prefix' => 'admin'],function (){
+    include __DIR__.'/backend/web.php';
 });
