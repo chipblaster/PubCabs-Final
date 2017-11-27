@@ -39,4 +39,9 @@ Route::get('/contact','Frontend\IndexController@contact')->name('contact');
 /**
  *  Admin page routes
  */
+Route::group(['prefix' => 'admin','middleware' => 'auth'],function (){
 Route::get('/dasboard','Backend\AdminController@index')->name('admin');
+Route::resource('/contact','Backend\ContactController');
+Route::resource('/about','Backend\AboutController');
+Route::resource('/subscribes','Backend\SubscribesController');
+});

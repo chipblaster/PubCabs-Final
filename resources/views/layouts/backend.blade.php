@@ -106,29 +106,28 @@
                                     <li><a href="ui-cards.html">List</a></li>
                                 </ul>
                             </li>
-
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> Contact </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="components-grid.html">Add Contact Detail</a></li>
-                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
-                                    <li><a href="components-sweet-alert.html">List</a></li>
+                                    <li><a href="{{route('contact.create')}}">Add Contact Details</a></li>
+                                    <li><a href="{{route('contact.edit')}}">Edit Details</a></li>
+                                    <li><a href="{{route('contact.index')}}">List</a></li>
                                 </ul>
                             </li>
                              <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> About </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="components-grid.html">Add About Detail</a></li>
-                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
-                                    <li><a href="components-sweet-alert.html">List</a></li>
+                                    <li><a href="{{route('about.create')}}">Add About Detail</a></li>
+                                    <li><a href="{{route('about.edit')}}">Edit Details</a></li>
+                                    <li><a href="{{route('about.index')}}">List</a></li>
                                 </ul>
                             </li>
                               <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-widgets"></i> <span> Social </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="components-grid.html">Add Social Detail</a></li>
-                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
-                                    <li><a href="components-sweet-alert.html">List</a></li>
+                                    <li><a href="{{route('social.create')}}">Add Social Detail</a></li>
+                                    <li><a href="{{route('social.edit')}}">Edit Details</a></li>
+                                    <li><a href="{{route('social.index')}}">List</a></li>
                                 </ul>
                             </li>
                         </ul>
