@@ -7,25 +7,25 @@
         <meta name="author" content="Coderthemes">
 
         <!-- App Favicon -->
-        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('admin_assets/images/favicon.ico')}}">
 
         <!-- App title -->
         <title>Uplon - Responsive Admin Dashboard Template</title>
 
         <!--calendar css-->
-        <link href="{{asset('assets/plugins/fullcalendar/css/fullcalendar.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('admin_assets/plugins/fullcalendar/css/fullcalendar.min.css')}}" rel="stylesheet" />
 
         <!-- Switchery css -->
-        <link href="{{asset('assets/plugins/switchery/switchery.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('admin_assets/plugins/switchery/switchery.min.css')}}" rel="stylesheet" />
 
         <!-- Bootstrap CSS -->
-        <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin_assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- App CSS -->
-        <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin_assets/css/style.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- Modernizr js -->
-        <script src="{{asset('assets/js/modernizr.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/modernizr.min.js')}}"></script>
 
 
     </head>
@@ -48,14 +48,14 @@
                 <nav class="navbar-custom">
                     <ul class="list-inline float-right mb-0">
                         <li class="list-inline-item dropdown notification-list">
-                            {{--<a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"--}}
-                               {{--aria-haspopup="false" aria-expanded="false">--}}
-                                {{--<img src="{{asset('assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle">--}}
-                            {{--</a>--}}
+                            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                                 aria-haspopup="false" aria-expanded="false">
+                                <img src="{{asset('admin_assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle">
+                            </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
-                                    <h5 class="text-overflow"><small>Welcome ! Admin</small> </h5>
+                                    <h5 class="text-overflow"><small>Welcome ! {{Auth::user()->name}}</small> </h5>
                                 </div>
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
@@ -83,7 +83,6 @@
             <!-- ========== Left Sidebar Start ========== -->
             <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
-
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
                         <ul>
@@ -93,29 +92,17 @@
                                     <li><a href="ui-cards.html">List</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> Content </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-
-                                    <li><a href="{{route('contact.index')}}">Contact</a></li>
-                                    <li><a href="components-range-sliders.html">Edit Details</a></li>
-                                    <li><a href="components-sweet-alert.html">List</a></li>
-                                </ul>
-                            </li>
                              <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-album"></i> <span> About </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Content </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{route('about.create')}}">Add About Detail</a></li>
-                                    <li><a href="{{route('about.edit')}}">Edit Details</a></li>
-                                    <li><a href="{{route('about.index')}}">List</a></li>
+                                    <li><a href="{{route('contact')}}">Contact</a></li>
+                                    <li><a href="{route('social')}}">Social</a></li>
                                 </ul>
                             </li>
-                              <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-widgets"></i> <span> Social </span> <span class="menu-arrow"></span></a>
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span>About </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{route('social.create')}}">Add Social Detail</a></li>
-                                    <li><a href="{{route('social.edit')}}">Edit Details</a></li>
-                                    <li><a href="{{route('social.index')}}">List</a></li>
+                                    <li><a href="{{route('about.index')}}">List</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -155,29 +142,29 @@
         </script>
 
         <!-- jQuery  -->
-        <script src="{{asset('assets/js/jquery.min.js')}}"></script>
-        <script src="{{asset('assets/js/popper.min.js')}}"></script><!-- Tether for Bootstrap -->
-        <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('assets/js/detect.js')}}"></script>
-        <script src="{{asset('assets/js/fastclick.js')}}"></script>
-        <script src="{{asset('assets/js/jquery.blockUI.js')}}"></script>
-        <script src="{{asset('assets/js/waves.js')}}"></script>
-        <script src="{{asset('assets/js/jquery.nicescroll.js')}}"></script>
-        <script src="{{asset('assets/js/jquery.scrollTo.min.js')}}"></script>
-        <script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
-        <script src="{{asset('assets/plugins/switchery/switchery.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/popper.min.js')}}"></script><!-- Tether for Bootstrap -->
+        <script src="{{asset('admin_assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/detect.js')}}"></script>
+        <script src="{{asset('admin_assets/js/fastclick.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.blockUI.js')}}"></script>
+        <script src="{{asset('admin_assets/js/waves.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.nicescroll.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.scrollTo.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.slimscroll.js')}}"></script>
+        <script src="{{asset('admin_assets/plugins/switchery/switchery.min.js')}}"></script>
 
         <!-- Jquery-Ui -->
-        <script src="{{asset('assets/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+        <script src="{{asset('admin_assets/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 
         <!-- BEGIN PAGE SCRIPTS -->
-        <script src="{{asset('assets/plugins/moment/moment.js')}}"></script>
-        <script src="{{asset('assets/plugins/fullcalendar/js/fullcalendar.min.js')}}"></script>
-        <script src="{{asset('assets/pages/jquery.fullcalendar.js')}}"></script>
+        <script src="{{asset('admin_assets/plugins/moment/moment.js')}}"></script>
+        <script src="{{asset('admin_assets/plugins/fullcalendar/js/fullcalendar.min.js')}}"></script>
+        <script src="{{asset('admin_assets/pages/jquery.fullcalendar.js')}}"></script>
 
         <!-- App js -->
-        <script src="{{asset('assets/js/jquery.core.js')}}"></script>
-        <script src="{{asset('assets/js/jquery.app.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.core.js')}}"></script>
+        <script src="{{asset('admin_assets/js/jquery.app.js')}}"></script>
 
     </body>
 </html>

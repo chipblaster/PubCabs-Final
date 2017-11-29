@@ -1,0 +1,26 @@
+.nopadding{
+    padding: 0px;
+}
+.btnAll{
+    background-color: #333;
+    border-radius: 0;
+    border: 0;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px !important;
+    font-family: poppins;
+    font-weight: 200;
+    
+    &:hover{
+        background-color: #333;
+        border-radius: 0;
+        border: 0;
+        color: white;
+        text-decoration: none;
+    }
+    &-mod{
+        margin-top: 20px;
+    }
+
+}

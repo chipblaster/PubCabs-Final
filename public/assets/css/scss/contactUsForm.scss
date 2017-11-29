@@ -1,0 +1,94 @@
+#contactUsForm{
+    margin-top: 70px;
+    .contactUsTouch{
+        margin-top: 17px;
+        margin-bottom: 30px;
+
+h4{
+    margin-bottom: 20px;
+
+}
+      
+       
+    }
+    .contact-title{
+        width: 45px;
+        height: 2px;
+        margin: 0px 0 30px 0;
+        background: #cc4452;
+    }
+
+
+    .contactUsDetails{
+        margin-bottom: 30px;
+        h4{
+            margin-bottom: 20px;
+
+        }
+        ul{
+            padding: 0;
+
+
+            li{
+border-top: #e8e8e8 1px solid;
+                list-style: none;
+                min-height: 60px;
+                padding: 22px;
+                &:last-child{
+border-bottom:#e8e8e8 1px solid;
+
+                }
+
+i{
+    font-size: 20px;
+    padding-right: 15px;
+    color: #cc4452;
+
+}
+                span{
+                    font-size: 15px;
+                    text-decoration: none;
+
+
+                }
+            }
+        }
+    }
+
+
+    .contactUsSocial{
+        h4{
+            margin-bottom: 20px;
+
+        }
+
+        ul{
+padding: 0;
+
+            li{
+list-style: none;
+display: inline-block;
+                a{
+text-decoration: none;
+
+
+                }
+      i{
+        color: #cc4452;  
+        font-size: 25px;
+        margin: 0 28px 0 0;
+      }        }
+        }
+    }
+
+
+    .btn{
+        color: white;
+        background: #cc4452;
+        padding: 10px 30px;
+        border-radius: 20px;
+    }
+    #inputHelpBlock,#exampleInputEmail1{
+        height: 47px;
+    }
+}

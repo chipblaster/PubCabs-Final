@@ -298,7 +298,7 @@ h2 {
 
 /* customize nav style */
 .navbar-custom {
-  background-color: #333;
+  background-color: #26c281;
   font-weight: 700;
   text-transform: uppercase;
   border-width: 0; }
@@ -757,7 +757,7 @@ li.dropdown-header.megaheader {
     color: white; }
 
 .footer {
-  background: #333; }
+  background: #26c281; }
   .footer__title {
     color: white; }
   .footer__titleText {
@@ -828,12 +828,10 @@ li.dropdown-header.megaheader {
   padding: 0px; }
 
 .btnAll {
-  background-color: #ffd800;
-  color: #333;
+  background-color: #333;
   border-radius: 0;
   border: 0;
-  font-weight: 300;
-  font-family: Poppins;
+  color: white;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 14px !important;
@@ -843,77 +841,7 @@ li.dropdown-header.megaheader {
     background-color: #333;
     border-radius: 0;
     border: 0;
-    color: #ffd800;
+    color: white;
     text-decoration: none; }
   .btnAll-mod {
     margin-top: 20px; }
-
-#components {
-  height: 700px;
-  width: 100%; }
-  #components .allbuttons {
-    height: 400px;
-    box-sizing: border-box;
-    padding: 30px; }
-    #components .allbuttons .btnAllTwo {
-      background-color: #ffd800;
-      color: #333;
-      border-radius: 0;
-      border: 1px solid transparent;
-      font-weight: 300;
-      font-family: Poppins;
-      text-decoration: none;
-      padding: 15px 20px;
-      font-size: 17px;
-      font-family: poppins;
-      font-weight: 200; }
-      #components .allbuttons .btnAllTwo:hover {
-        border: 1px solid black;
-        background: transparent;
-        color: #ffd800; }
-    #components .allbuttons .btnAllThree {
-      background-color: #ffd800;
-      color: #333;
-      border-radius: 10px;
-      border: 1px solid transparent;
-      font-weight: 300;
-      font-family: Poppins;
-      text-decoration: none;
-      padding: 15px 35px;
-      font-size: 17px;
-      font-family: poppins;
-      font-weight: 200;
-      transition: all .7s ease; }
-      #components .allbuttons .btnAllThree:hover {
-        border: 1px solid black;
-        background: transparent;
-        color: #ffd800;
-        transition: all .7s ease; }
-    #components .allbuttons .btnAllFour {
-      background-color: #ffd800;
-      color: #333;
-      border-radius: 10px;
-      border: 1px solid transparent;
-      text-decoration: none;
-      padding: 15px 35px;
-      font-size: 17px;
-      font-family: poppins;
-      font-weight: 200;
-      transition: all .7s ease; }
-      #components .allbuttons .btnAllFour:hover {
-        border: 1px solid black;
-        background: transparent;
-        color: #ffd800;
-        transition: all .7s ease;
-        box-shadow: 0px 5px 5px 0px; }
-
-.no_1 {
-  background: #ffd800;
-  color: #333; }
-  .no_1:hover {
-    background: #333;
-    color: #ffd800; }
-
-.no_2 {
-  background: #26c281;
-  color: #fff; }
