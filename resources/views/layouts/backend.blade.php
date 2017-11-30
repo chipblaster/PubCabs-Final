@@ -95,8 +95,8 @@
                              <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Content </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{route('contact')}}">Contact</a></li>
-                                    <li><a href="{route('social')}}">Social</a></li>
+                                    <li><a href="{{route('contact.index')}}">Contact</a></li>
+                                    <li><a href="({route('social.index')}}">Social</a></li>
                                 </ul>
                             </li>
                             <li class="has_sub">
