@@ -24,7 +24,7 @@
                         </p>
                         <form class="signup" action="index.html" method="post">
                             <div class="form-group">
-                                <input type="submit" class="btn btnAll"  value="Subscribe">
+                                <input type="submit" class="btn-def btn-def-gre"  value="Subscribe">
 
                             </div>
                         </form>

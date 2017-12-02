@@ -51,7 +51,7 @@
                                       </select>
                                    </div>
                                    <div class="form-group">
-                                      <input type="submit" class="btn btn-success btn-blockß btnAll"  value="SUBMIT">
+                                      <input type="submit" class="btn-def btn-def-yel"  value="SUBMIT">
                                    </div>
                                 </form>
                              </article>
@@ -122,7 +122,7 @@
 </div>
 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
   <div class="passengerAboutBtn">
-    <a href="" class="btnAll">Learn More!</a>
+    <a href="" class="btn-def btn-def-brow">Learn More!</a>
   </div>
 </div>
  </div>
@@ -143,7 +143,7 @@
           <div class="aboutUsInfo">
             <h3>About Us</h3>
               <p>{{substr($about->description,0,221)}}</p>
-            <a href="{{route('about')}}" class="btnAll">Learn More</a>
+            <a href="{{route('about')}}" class="btn-def btn-def-yel">Learn More</a>
           </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
@@ -171,7 +171,7 @@
           </div>
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
             <div class="driverAboutBtn">
-              <a href="" class="btnAll btnAll-mod">Learn More!</a>
+              <a href="" class="btn-def btn-def-brow">Learn More!</a>
             </div>
         
            </div>
@@ -196,7 +196,7 @@
 <div class="driverUsInfo">
     <h3>Drivers</h3>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea doloremque nesciunt sapiente pariatur porro reiciendis, corrupti et asperiores neque quia natus molestias expedita in a? Aut voluptate aspernatur maiores sequi.</p>
-    <a href="" class="btnAll">Learn More</a>
+    <a href="" class="btn-def btn-def-yel">Learn More</a>
 
 </div>
       </div>
