@@ -37,8 +37,8 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     { 
-        $banner_img_name =  rand(1,99999).'-'.$request->file('banner_img')->getClientOriginalExtension();
-        $content_img_name =  rand(1,99999).'-'.$request->file('banner_img')->getClientOriginalExtension();
+        $banner_img_name =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
+        $content_img_name =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
         $request->file('banner_img')->move(public_path('assets/upload'),$banner_img_name);
         $request->file('content_img')->move(public_path('assets/upload'),$content_img_name);
         $data['description'] = $request->description;
@@ -79,37 +79,9 @@ class DriverController extends Controller
      */
     public function update(Request $request, Driver $driver)
     {
-         if ($request->hasFile('banner_img') && $request->hasFile('content_img')) 
-        {
-            unlink('assets/upload/'.$driver->banner_img);
-            unlink('assets/upload/'.$driver->photo);
-            $banner_img =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
-            $content_img =  rand(1,99999).'.'.$request->file('content_img')->getClientOriginalExtension();
-            $request->file('banner_img')->move(public_path('assets/upload'),$banner_img);
-            $request->file('content_img')->move(public_path('assets/upload'),$content_img);
-            $new_banner_img = $banner_img;
-            $new_content_img=$content_img;
-        }
-        elseif($request->hasFile('banner_img'))
-        {
-            unlink('assets/upload/'.$driver->banner_img);
-            $banner_img =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension(); 
-            $request->file('banner_img')->move(public_path('assets/upload'),$banner_img);
-            $new_banner_img = $banner_img;
-        }
-        elseif($request->hasFile('photo'))
-        {
-            unlink('assets/upload/'.$driver->photo);
-            $photo =  rand(1,99999).'.'.$request->file('content_img')->getClientOriginalExtension();
-            $request->file('content_img')->move(public_path('assets/upload'),$content_img);
-            $new_content_img = $content_img;
-        }
-        else
-        {
-            $new_banner_img=$driver->banner_img;
-            $new_content_img=$driver->content_img;  // content image
-        }
-
+       
+        $new_banner_img=$this->uploadImage($request,'banner_img','assets/upload',$driver,$driver->banner_img);
+        $new_content_img=$this->uploadImage($request,'banner_img','assets/upload',$driver,$driver->content_img);
         $driver->description=$request->description;
         $driver->banner_img=$new_banner_img;
         $driver->content_img=$new_content_img;

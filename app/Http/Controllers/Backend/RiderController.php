@@ -15,7 +15,8 @@ class RiderController extends Controller
      */
     public function index()
     {
-        //
+        $riders=Rider::all();
+        return view ('backend.rider.index',compact('riders'));
     }
 
     /**
@@ -25,7 +26,7 @@ class RiderController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.rider.create');
     }
 
     /**
@@ -36,7 +37,15 @@ class RiderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $banner_img_name =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
+        $content_img_name =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
+        $request->file('banner_img')->move(public_path('assets/upload'),$banner_img_name);
+        $request->file('content_img')->move(public_path('assets/upload'),$content_img_name);
+        $data['description']=$request->description;
+         $data['banner_img'] = $banner_img_name;
+        $data['content_img'] = $content_img_name;
+        Rider::create($data);
+        return redirect()->route('rider.index');
     }
 
     /**
@@ -58,7 +67,7 @@ class RiderController extends Controller
      */
     public function edit(Rider $rider)
     {
-        //
+        return view('backend.rider.edit',compact('rider'));
     }
 
     /**
@@ -70,7 +79,13 @@ class RiderController extends Controller
      */
     public function update(Request $request, Rider $rider)
     {
-        //
+        $new_banner_img=$this->uploadImage($request,'banner_img','assets/upload',$rider,$rider->banner_img);
+        $new_content_img=$this->uploadImage($request,'content_img','assets/upload',$rider,$rider->content_img);
+        $rider->description=$request->description;
+        $rider->banner_img=$new_banner_img;
+        $rider->content_img=$new_content_img;
+        $rider->update();
+        return redirect()->route('rider.index');
     }
 
     /**
@@ -81,6 +96,7 @@ class RiderController extends Controller
      */
     public function destroy(Rider $rider)
     {
-        //
+        $rider->delete($rider->id);
+        return back();
     }
 }

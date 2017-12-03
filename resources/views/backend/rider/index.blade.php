@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="page-title-box">
-                            <h4 class="page-title float-left">Drivers</h4>
+                            <h4 class="page-title float-left">Riders</h4>
 
                             <div class="clearfix"></div>
                         </div>
@@ -18,9 +18,8 @@
                 <!-- end row -->
                 <div class="row">
                     <div class="col-12">
-                        
                       <div class="card-box">
-                         <a href="{{route('driver.create')}}"  class="btn btn-success btn-rounded waves-effect waves-light pull-right">Create
+                         <a href="{{route('rider.create')}}"  class="btn btn-success btn-rounded waves-effect waves-light pull-right">Create
                         </a>
                         <table class="table">
                             <thead class="thead-default">
@@ -33,17 +32,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                          @foreach ($drivers->sortByDesc('id') as $driver)
+                          @foreach ($riders->sortByDesc('id') as $rider)
                             <tr>
-                                <td>{{ $driver->description }}</td>
-                                <td><img width="100" src="{{asset('assets/upload/'.$driver->banner_img)}}" > </td>
-                                <td><img width="100" src="{{asset('assets/upload/'.$driver->content_img)}}" > </td>
+                                <td>{{ $rider->description }}</td>
+                                <td><img width="100" src="{{asset('assets/upload/'.$rider->banner_img)}}" > </td>
+                                <td><img width="100" src="{{asset('assets/upload/'.$rider->content_img)}}" > </td>
                               
                                 <td>
-                                     <a  class="btn waves-effect waves-light btn-warning pull-right" href="{{route('driver.edit',['id' => $driver->id])}}" class="btn btn-info"><i class="fa fa-wrench"></i></a>  
+                                     <a  class="btn waves-effect waves-light btn-warning pull-right" href="{{route('rider.edit',['id' => $rider->id])}}" class="btn btn-info"><i class="fa fa-wrench"></i></a>  
                                 </td>
                                 <td>
-                                    <form id="form-horizontal" action="{{route('driver.destroy',['id' => $driver->id])}}" method="post" class="form-horizontal">
+                                    <form id="form-horizontal" action="{{route('rider.destroy',['id' => $rider->id])}}" method="post" class="form-horizontal">
                                         {{csrf_field()}}
                                         {{method_field('DELETE')}}
                                          <button class="btn waves-effect waves-light btn-danger "><i class="fa fa-remove"></i></button>  

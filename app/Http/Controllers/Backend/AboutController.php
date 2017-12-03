@@ -72,37 +72,8 @@ class AboutController extends Controller
      */
     public function update(Request $request, About $about)
     {
-        if ($request->hasFile('banner_img') && $request->hasFile('photo')) 
-        {
-            unlink('assets/upload/'.$about->banner_img);
-            unlink('assets/upload/'.$about->photo);
-            $banner_img =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
-            $photo =  rand(1,99999).'.'.$request->file('photo')->getClientOriginalExtension();
-            $request->file('banner_img')->move(public_path('assets/upload'),$banner_img);
-            $request->file('photo')->move(public_path('assets/upload'),$photo);
-            $new_banner_img = $banner_img;
-            $new_photo=$photo;
-        }
-        elseif($request->hasFile('banner_img'))
-        {
-            unlink('assets/upload/'.$about->banner_img);
-            $banner_img =  rand(1,99999).'.'.$request->file('banner_img')->getClientOriginalExtension();
-            $request->file('banner_img')->move(public_path('assets/upload'),$banner_img);
-            $new_banner_img = $banner_img;
-        }
-        elseif($request->hasFile('photo'))
-        {
-            unlink('assets/upload/'.$about->photo);
-            $photo =  rand(1,99999).'.'.$request->file('photo')->getClientOriginalExtension();
-            $request->file('photo')->move(public_path('assets/upload'),$photo);
-            $new_photo = $photo;
-        }
-        else
-        {
-            $new_banner_img=$about->banner_img;
-            $new_photo=$about->photo;  // content image
-        }
-
+        $new_banner_img=$this->uploadImage($request,'banner_img','assets/upload',$about,$about->banner_img);
+        $new_photo=$this->uploadImage($request,'photo','assets/upload',$about,$about->photo);
         $about->description=$request->description;
         $about->banner_img=$new_banner_img;
         $about->photo=$new_photo;
