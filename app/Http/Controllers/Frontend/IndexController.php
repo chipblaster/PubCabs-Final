@@ -107,4 +107,10 @@ class IndexController extends Controller
     {
         //
     }
+
+     
+    public function riders()
+    {
+        return view('frontend.riders');
+    }
 }

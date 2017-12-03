@@ -1,25 +1,21 @@
-#driversUs{
+#driversUs {
+  .driversUsImage {
+    background-repeat: no-repeat;
+    height: 350px;
+  }
 
-.driversUsImage{
-
-    background-repeat:no-repeat;
-    height:350px;
-
-}
-
-    .driverUsInfo{
-        box-sizing: border-box;
-        padding: 35px;
-background-color: #26c281;
-min-height: 350px;
-h3{
-    color: white;
-    margin-bottom: 5%;
-}
-p{
-    color: white;
-    margin-bottom: 10%;
-}
-
-}
+  .driverUsInfo {
+    box-sizing: border-box;
+    padding: 35px;
+    background-color: #26c281;
+    min-height: 350px;
+    h3 {
+      color: white;
+      margin-bottom: 5%;
+    }
+    p {
+      color: white;
+      margin-bottom: 10%;
+    }
+  }
 }

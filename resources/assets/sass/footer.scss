@@ -1,67 +1,65 @@
-.footer{
-    background: #333;
-    &__title{
-        color: white;
-    }
-    &__titleText{
-        color: white;
-        margin-bottom: 30px;
-    }
-    &__wrapper{
-        padding: 0 40px 0 0 ;
-    }
-    &__body{
-        color: white;
-        
-    }
-    &__bodyText{
-        color: white;
-    }
-    &__listBody{
-        padding: 0 0 0 35px;
-    }
-    &__listSection{
-        list-style: none;
-        color: white;
-        padding: 0 0 25px 0;
-    }
-    &__listRow{
-            
-    }
-    &__input{
-        height: 40px;
-    }
+.footer {
+  background: #333;
+  &__title {
+    color: white;
+  }
+  &__titleText {
+    color: white;
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    padding: 0 40px 0 0;
+  }
+  &__body {
+    color: white;
+  }
+  &__bodyText {
+    color: white;
+  }
+  &__listBody {
+    padding: 0 0 0 35px;
+  }
+  &__listSection {
+    list-style: none;
+    color: white;
+    padding: 0 0 25px 0;
+  }
+  &__listRow {
+  }
+  &__input {
+    height: 40px;
+  }
 }
 
-.location-icon ::before{
-    content: "\f041";
-    font-size: 30px;
-    left: -32px;   
-    font-family: "FontAwesome";
-    line-height: 0px;
-    position: absolute;
-    top: 11px;
-    color: #fff;
+.location-icon ::before {
+  content: "\f041";
+  font-size: 30px;
+  left: -32px;
+  font-family: "FontAwesome";
+  line-height: 0px;
+  position: absolute;
+  top: 11px;
+  color: #fff;
 }
 
-.phone-icon ::before{
-    content: "\f095";
-    font-size: 30px;
-    left: -32px;   
-    font-family: "FontAwesome";
-    line-height: 0px;
-    position: absolute;
-    top: 24px;
-    color: #fff;
+.phone-icon ::before {
+  content: "\f095";
+  font-size: 30px;
+  left: -32px;
+  font-family: "FontAwesome";
+  line-height: 0px;
+  position: absolute;
+  top: 24px;
+  color: #fff;
 }
 
-.mail-icon ::before{
-    content: "\f0e0";
-    font-size: 30px;
-    left: -32px;   
-    font-family: "FontAwesome";
-    line-height: 0px;
-    position: absolute;
-    top: 22px;
-    color: #fff;
+.mail-icon ::before {
+  content: "\f0e0";
+  font-size: 30px;
+  left: -32px;
+  font-family: "FontAwesome";
+  line-height: 0px;
+  position: absolute;
+  top: 22px;
+  color: #fff;
 }

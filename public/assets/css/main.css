@@ -847,7 +847,6 @@ li.dropdown-header.megaheader {
 #aboutUs .aboutUsImage {
   min-height: 350px;
   background-repeat: no-repeat !important;
-  background-size: cover !important;
 }
 
 #aboutUs .nopadding {
