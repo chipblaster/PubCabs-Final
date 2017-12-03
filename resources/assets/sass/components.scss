@@ -1,90 +1,47 @@
-#components{
-height: 700px;
-width: 100%;
-.allbuttons{
-    height: 400px;
-    box-sizing: border-box;
-    padding: 30px;
+.btn-def {
+  border-radius: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: poppins;
+  font-weight: 400;
+  padding: 6px 13px;
+  &:hover {
+    font-family: poppins;
+    font-weight: 400;
+    transition: 0.3s ease all;
+    text-decoration: none;
+  }
 
-    // btnall2
-.btnAllTwo{
+  &-yel {
     background-color: #ffd800;
     color: #333;
-    border-radius: 0;
-    border: 1px solid transparent;
-    font-weight: 300;
-    font-family: Poppins;
-    text-decoration: none;
-    padding: 15px 20px;
-    font-size: 17px;
-    font-family: poppins;
-    font-weight: 200;
-    &:hover{
-        border: 1px solid black;
-        background: transparent;
-        color: #ffd800;
- 
-    
-
+    &:hover {
+      background-color: #333;
+      color: #ffd800;
     }
-}
-
-// btnall3
-.btnAllThree{
+  }
+  &-brow {
+    background-color: #333;
+    color: #ffd800;
+    &:hover {
+      background-color: #ffd800;
+      color: #333;
+    }
+  }
+  &-gre {
     background-color: #ffd800;
     color: #333;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    font-weight: 300;
-    font-family: Poppins;
-    text-decoration: none;
-    padding: 15px 35px;
-    font-size: 17px;
-    font-family: poppins;
-    font-weight: 200;
-    transition: all .7s ease;
-    &:hover{
-        border: 1px solid black;
-        background: transparent;
-        color: #ffd800;
-    transition: all .7s ease;
-    
- 
-    
-
+    &:hover {
+      background-color: #26c281;
+      color: #333;
     }
-}
-.btnAllFour{
-    background-color: #ffd800;
-    color: #333;
-    border-radius: 10px;
-    border: 1px solid transparent;
- 
-
-    text-decoration: none;
-    padding: 15px 35px;
-    font-size: 17px;
-    font-family: poppins;
-    font-weight: 200;
-    transition: all .7s ease;
-    &:hover{
-        border: 1px solid black;
-        background: transparent;
-        color: #ffd800;
-    transition: all .7s ease;
-    box-shadow: 0px 5px 5px 0px;
-    
- 
-    
-
+  }
+  &-gre2 {
+    background-color: #26c281;
+    color: white;
+    &:hover {
+      background-color: #ffd800;
+      color: white;
     }
-}
-
-}
-// ACCORDIONS
-
-
-// accordion2
-
-
+  }
 }
