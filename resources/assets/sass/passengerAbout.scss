@@ -1,26 +1,16 @@
-#passengerAbout{
-
-    box-sizing: border-box;
-    padding: 15px 11px 50px 15px;
-    line-height: 2;
-    background-repeat:no-repeat;
-    background-size:cover;
-    .passengerAboutInfo{
-        h3{
-            color: white;
-            font-size: 1.6em;
-        }
+#passengerAbout {
+  box-sizing: border-box;
+  padding: 15px 11px 50px 15px;
+  line-height: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .passengerAboutInfo {
+    h3 {
+      color: white;
+      font-size: 1.6em;
     }
-    .passengerAboutBtn{
-        margin-top: 10%;
-  a{
-    background: #333;
-    border-radius: 0;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    
   }
-
-    }
+  .passengerAboutBtn {
+    margin-top: 10%;
+  }
 }
