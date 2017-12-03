@@ -24,7 +24,8 @@
         <!-- App CSS -->
         <link href="{{asset('admin_assets/css/style.css')}}" rel="stylesheet" type="text/css" />
 
-        <!-- Modernizr js -->
+        <link href="{{asset('assets/plugins/fileuploads/css/dropify.min.css')}}" rel="stylesheet" type="text/css" />
+        <!-- Modernizr js --> 
         <script src="{{asset('admin_assets/js/modernizr.min.js')}}"></script>
 
 
@@ -87,16 +88,13 @@
                     <div id="sidebar-menu">
                         <ul>
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Subscribes</span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="ui-cards.html">List</a></li>
-                                </ul>
+                                <a href="{{route('subscribe.index')}}" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Subscribes</span> </a>
                             </li>
                              <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Content </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="{{route('contact.index')}}">Contact</a></li>
-                                    <li><a href="({route('social.index')}}">Social</a></li>
+                                    <li><a href="{{route('social.index')}}">Social</a></li>
                                 </ul>
                             </li>
                             <li class="has_sub">
@@ -104,6 +102,12 @@
                                 <ul class="list-unstyled">
                                     <li><a href="{{route('about.index')}}">List</a></li>
                                 </ul>
+                            </li>
+                            <li class="has_sub">
+                                <a href="{{route('driver.index')}}" class="waves-effect"><i class="zmdi zmdi-widgets"></i> <span>Driver </span></a>
+                            </li>
+                            <li class="has_sub">
+                                <a href="{{route('rider.index')}}" class="waves-effect"><i class="zmdi zmdi-album"></i> <span>Rider </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -168,3 +172,4 @@
 
     </body>
 </html>
+   @yield('script');

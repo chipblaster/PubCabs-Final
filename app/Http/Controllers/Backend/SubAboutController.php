@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Sub_about;
+use App\Models\About;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -25,7 +26,7 @@ class SubAboutController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.sub-about.create');
     }
 
     /**
@@ -36,10 +37,16 @@ class SubAboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $abouts=About::all()->first();
+         $about_id=$abouts->id;
+         $data['about_id']=$about_id;
+         $data['title']=$request->title;
+         $data['description']=$request->description;
+         Sub_about::create($data);
+         return redirect()->route('about.index');
     }
 
-    /**
+    /** 
      * Display the specified resource.
      *
      * @param  \App\Models\Sub_about  $sub_about
@@ -58,7 +65,7 @@ class SubAboutController extends Controller
      */
     public function edit(Sub_about $sub_about)
     {
-        //
+        return view('backend.sub-about.edit',compact('sub_about'));
     }
 
     /**
@@ -70,7 +77,8 @@ class SubAboutController extends Controller
      */
     public function update(Request $request, Sub_about $sub_about)
     {
-        //
+       $sub_about->update($request->all());
+       return redirect()->route('about.index');
     }
 
     /**
@@ -81,6 +89,7 @@ class SubAboutController extends Controller
      */
     public function destroy(Sub_about $sub_about)
     {
-        //
+         $sub_about->delete($sub_about->id);
+         return back();
     }
 }

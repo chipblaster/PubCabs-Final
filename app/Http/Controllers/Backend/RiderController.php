@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\Subscribe;
+use App\Models\Rider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class SubscribeController extends Controller
+class RiderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,7 @@ class SubscribeController extends Controller
      */
     public function index()
     {
-        $subscribes=Subscribe::all();
-        return view('backend.subscribe.index',compact('subscribes'));
+        //
     }
 
     /**
@@ -43,10 +42,10 @@ class SubscribeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Subscribe  $subscribe
+     * @param  \App\Models\Rider  $rider
      * @return \Illuminate\Http\Response
      */
-    public function show(Subscribe $subscribe)
+    public function show(Rider $rider)
     {
         //
     }
@@ -54,10 +53,10 @@ class SubscribeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Subscribe  $subscribe
+     * @param  \App\Models\Rider  $rider
      * @return \Illuminate\Http\Response
      */
-    public function edit(Subscribe $subscribe)
+    public function edit(Rider $rider)
     {
         //
     }
@@ -66,10 +65,10 @@ class SubscribeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Subscribe  $subscribe
+     * @param  \App\Models\Rider  $rider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Subscribe $subscribe)
+    public function update(Request $request, Rider $rider)
     {
         //
     }
@@ -77,10 +76,10 @@ class SubscribeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Subscribe  $subscribe
+     * @param  \App\Models\Rider  $rider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Subscribe $subscribe)
+    public function destroy(Rider $rider)
     {
         //
     }

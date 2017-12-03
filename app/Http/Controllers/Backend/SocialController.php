@@ -14,8 +14,9 @@ class SocialController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $socials=Social::all();
+        return view('backend.social.index',compact('socials'));
     }
 
     /**
@@ -25,7 +26,7 @@ class SocialController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.social.create');
     }
 
     /**
@@ -36,7 +37,8 @@ class SocialController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Social::create($request->all());
+        return redirect()->route('social.index');
     }
 
     /**
@@ -58,7 +60,7 @@ class SocialController extends Controller
      */
     public function edit(Social $social)
     {
-        //
+        return view('backend.social.edit',compact('social'));
     }
 
     /**
@@ -70,7 +72,8 @@ class SocialController extends Controller
      */
     public function update(Request $request, Social $social)
     {
-        //
+        $social->update($request->all());
+        return redirect()->route('social.index');
     }
 
     /**
@@ -81,6 +84,7 @@ class SocialController extends Controller
      */
     public function destroy(Social $social)
     {
-        //
+        $social->delete($social->id);
+        return back();
     }
 }

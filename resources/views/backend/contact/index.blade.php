@@ -20,15 +20,17 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <a href="{{route('contact.edit',['id' => $contact->id])}}" class="btn btn-success btn-rounded waves-effect waves-light pull-right">Edit
-                            </a>
+                        
                         <div class="card-box">
-                            
                             <form action="#" class="form-horizontal">
                                 <div class="form-group row">
                                     <label class="col-sm-5 form-control-label">Phone</label>
-                                    <div class="col-sm-7">
+                                    <div class="col-sm-5">
                                         {{$contact->phone}}
+                                    </div>
+                                    <div class="col-sm-2">
+                                         <a href="{{route('contact.edit',['id' => $contact->id])}}" class="btn waves-effect waves-light btn-warning pull-right"><i class="fa fa-wrench"></i>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="form-group row">

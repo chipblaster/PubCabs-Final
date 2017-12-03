@@ -19,6 +19,8 @@ class CreateSubscribesTable extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->string('phone');
+            $table->string('zip_code');
+            $table->boolean('type');
             $table->integer('country_id')->unsigned()->index();
             $table->timestamps();
 
