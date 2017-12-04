@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Models\About;
-use App\Models\Contact;
+use App\Models\Driver;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class IndexController extends Controller
+class DriverController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,30 +15,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $about = About::all()->first();
-        $contact = Contact::all()->first();
-        return view('frontend.index',compact('about','contact'));
-    }
-
-
-    /**
-     * Display a about page.
-     */
-
-    public function about()
-    {
-        $about = About::all()->first();
-        return view('frontend.about',compact('about'));
-    }
-
-    /**
-     * Display a contact page.
-     */
-
-    public function contact()
-    {
-        $contact = Contact::all()->first();
-        return view('frontend.contact',compact('contact'));
+        $drivers=Driver::all();
+        return view("frontend.drivers",compact('drivers'));
     }
 
     /**
@@ -66,10 +43,10 @@ class IndexController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Driver $driver)
     {
         //
     }
@@ -77,10 +54,10 @@ class IndexController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Driver $driver)
     {
         //
     }
@@ -89,10 +66,10 @@ class IndexController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Driver $driver)
     {
         //
     }
@@ -100,14 +77,11 @@ class IndexController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Driver $driver)
     {
         //
     }
-
-     
-    
 }

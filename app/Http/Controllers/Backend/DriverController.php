@@ -70,7 +70,8 @@ class DriverController extends Controller
         return view('backend.driver.edit',compact('driver'));
     }
 
-    /**
+
+     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -79,7 +80,6 @@ class DriverController extends Controller
      */
     public function update(Request $request, Driver $driver)
     {
-       
         $new_banner_img=$this->uploadImage($request,'banner_img','assets/upload',$driver,$driver->banner_img);
         $new_content_img=$this->uploadImage($request,'banner_img','assets/upload',$driver,$driver->content_img);
         $driver->description=$request->description;
@@ -87,7 +87,7 @@ class DriverController extends Controller
         $driver->content_img=$new_content_img;
         $driver->update();
         return redirect()->route('driver.index');
-    }
+    } 
 
     /**
      * Remove the specified resource from storage.

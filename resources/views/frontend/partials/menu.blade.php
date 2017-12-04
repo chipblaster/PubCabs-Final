@@ -27,11 +27,9 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav nav-justified">
                 <li class="active"><a href="{{route('about')}}"><strong>About Us</strong></a></li>
-                <li><a href="">Drivers</a></li>
+                <li><a href="{{route('drivers')}}">Drivers</a></li>
                 <li><a href="{{route('riders')}}">Riders  </a></li>
-                <li><a href="#section4">News</a></li>
                 <li><a href="{{route('contact')}}">Contact</a></li>
-                <li><a href="#section5">Partners</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container -->
