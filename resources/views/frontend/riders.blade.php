@@ -1,7 +1,7 @@
 @extends("layouts.frontend")
 @section("content")
 @include("frontend.partials.menu")
-<section id="aboutUs">
+<section id="" class="aboutUs" >
    <div class="container-fluid">
       <div class="row">
          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -20,7 +20,7 @@
       </div>
    </div>
 </section>
-<section id="driversUs">
+<section id="" class="driversUs" >
    <div class="col-md-12">
       <div class="row">
          <div class="col-md-6 nopadding">
@@ -36,6 +36,5 @@
          </div>
       </div>
    </div>
-   <div class="clearfix"></div>
 </section>
 @endsection

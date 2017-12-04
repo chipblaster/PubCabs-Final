@@ -2,28 +2,24 @@
 @section('title','About')
 @section('content')
     <!-- ABOUT SECTION BEGIN -->
-    <section id="About" style="background:url('{{asset('assets/images/image28.jpg')}}')">
-
+    <section id="" class="About" style="background:url('{{asset('assets/images/image28.jpg')}}')">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="AboutContent">
                     <h1>About Us</h1>
-
                     <a href="{{route('index')}}">
                         Home
                     </a>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
-
                     <span>AboutUs</span>
                 </div>
             </div>
         </div>
-
     </section>
     <!-- ABOUT SECTION END -->
 
     <!-- ABOUTINFO SECTION BEGIN -->
-    <section id="About__info">
+    <section id="" class="About__info">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
