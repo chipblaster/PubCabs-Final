@@ -1,6 +1,6 @@
 @extends('layouts.frontend') @section('title','Contact Us') @section('content')
 <!-- CONTACTUS SECTION BEGIN -->
-<section id="contactUs" style="background:url({{asset('assets/images/image28.jpg')}})">
+<section id="" class="contactUs" style="background:url({{asset('assets/images/image28.jpg')}})">
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="contactContent">
@@ -13,7 +13,7 @@
 </section>
 <!-- CONTACTUS SECTION END -->
 
-<section id="contactUsForm">
+<section id="" class="contactUsForm">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">

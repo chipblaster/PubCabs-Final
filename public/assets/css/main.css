@@ -1,20 +1,20 @@
-@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);#content {
+@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);.content {
   min-height: 563px;
 }
 
-#content .contentBgImage {
+.content .contentBgImage {
   background-size: 100% auto;
 }
 
-#content .contentSubscribe {
+.content .contentSubscribe {
   margin-top: 5%;
 }
 
-#content .login-signup {
+.content .login-signup {
   padding: 0 0 25px;
 }
 
-#content .btn-success {
+.content .btn-success {
   background: #26c281;
   border-radius: 0;
   border: 2px solid #26c281;
@@ -23,8 +23,8 @@
   transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#content .btn-success:hover,
-#content .btn-success:focus {
+.content .btn-success:hover,
+.content .btn-success:focus {
   background: #26c281;
   border: 2px solid #26c281;
   webkit-transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,15 +33,15 @@
   color: white;
 }
 
-#content a {
+.content a {
   color: #23bab5;
 }
 
-#content ul {
+.content ul {
   list-style-type: none;
 }
 
-#content article[role="login"] {
+.content article[role="login"] {
   background: rgba(0, 0, 0, 0.55);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
@@ -53,7 +53,7 @@
   outline: none;
 }
 
-#content article[role="login"]:hover {
+.content article[role="login"]:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 1px 15px rgba(0, 0, 0, 0.23);
   webkit-transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,24 +61,24 @@
   transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#content article[role="login"] h3 {
+.content article[role="login"] h3 {
   font-size: 26px;
   font-weight: 300;
   color: #23bab5;
   margin-bottom: 20px;
 }
 
-#content article[role="login"] p {
+.content article[role="login"] p {
   font-size: 16px;
   padding: 5px 15px;
 }
 
-#content .nav-tab-holder {
+.content .nav-tab-holder {
   padding: 0 0 0 30px;
   float: right;
 }
 
-#content .nav-tab-holder .nav-tabs {
+.content .nav-tab-holder .nav-tabs {
   border: 0;
   float: none;
   display: table;
@@ -86,7 +86,7 @@
   width: 100%;
 }
 
-#content .nav-tab-holder .nav-tabs > li {
+.content .nav-tab-holder .nav-tabs > li {
   margin-bottom: -3px;
   text-align: center;
   padding: 0;
@@ -95,7 +95,7 @@
   padding: 0;
 }
 
-#content .nav-tab-holder .nav-tabs > li > a {
+.content .nav-tab-holder .nav-tabs > li > a {
   background: #333;
   color: white;
   margin: 0;
@@ -104,9 +104,9 @@
   padding: 12px;
 }
 
-#content .nav-tab-holder .nav-tabs > li.active > a,
-#content .nav-tabs > li.active > a:hover,
-#content .nav-tabs > li.active > a:focus {
+.content .nav-tab-holder .nav-tabs > li.active > a,
+.content .nav-tabs > li.active > a:hover,
+.content .nav-tabs > li.active > a:focus {
   color: #fff;
   background-color: #25c281;
   border: 0;
@@ -114,11 +114,11 @@
   padding: 13px;
 }
 
-#content .mobile-pull {
+.content .mobile-pull {
   float: right;
 }
 
-#content article[role="manufacturer"] {
+.content article[role="manufacturer"] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
   padding: 0 0 40px;
@@ -126,7 +126,7 @@
   margin: -45px auto 0;
 }
 
-#content article[role="manufacturer"] header {
+.content article[role="manufacturer"] header {
   background: #23bab5;
   color: #fff;
   padding: 10px;
@@ -134,43 +134,43 @@
   font-weight: 300;
 }
 
-#content article[role="manufacturer"] h1 {
+.content article[role="manufacturer"] h1 {
   font-size: 26px;
   font-weight: 300;
   border-bottom: 1px solid #26c281;
   padding: 25px 15px;
 }
 
-#content article[role="manufacturer"] ul {
+.content article[role="manufacturer"] ul {
   padding: 0 25px;
 }
 
-#content article[role="manufacturer"] ul li {
+.content article[role="manufacturer"] ul li {
   font-size: 16px;
   border-bottom: 1px solid #cc4452;
   padding: 20px 15px;
   color: #404040;
 }
 
-#content article[role="manufacturer"] ul li i {
+.content article[role="manufacturer"] ul li i {
   color: #23bab5;
 }
 
-#content .login-signup {
+.content .login-signup {
   padding: 0 0 25px;
 }
 
 @media only screen and (max-width: 767px) {
-  #content .mobile-pull {
+  .content .mobile-pull {
     float: none;
   }
 
-  #content .nav-tab-holder {
+  .content .nav-tab-holder {
     float: none;
     overflow: hidden;
   }
 
-  #content .nav-tabs > li > a {
+  .content .nav-tabs > li > a {
     font-size: 13px;
     font-weight: 600;
     padding: 10px 5px;
@@ -178,12 +178,12 @@
     text-overflow: ellipsis;
   }
 
-  #content .nav-tabs > li {
+  .content .nav-tabs > li {
     width: 50%;
   }
 }
 
-#content .marginAuto {
+.content .marginAuto {
   margin: 0;
 }
 
@@ -202,7 +202,7 @@
   text-align: center;
 }
 
-#passengerAbout {
+.passengerAbout {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 15px 11px 50px 15px;
@@ -211,12 +211,12 @@
   background-size: cover;
 }
 
-#passengerAbout .passengerAboutInfo h3 {
+.passengerAbout .passengerAboutInfo h3 {
   color: white;
   font-size: 1.6em;
 }
 
-#passengerAbout .passengerAboutBtn {
+.passengerAbout .passengerAboutBtn {
   margin-top: 10%;
 }
 
@@ -826,7 +826,7 @@ li.dropdown-header.megaheader {
   }
 }
 
-#aboutUs .aboutUsInfo {
+.aboutUs .aboutUsInfo {
   min-height: 350px;
   background: #26c281;
   -webkit-box-sizing: border-box;
@@ -834,26 +834,26 @@ li.dropdown-header.megaheader {
   padding: 35px;
 }
 
-#aboutUs .aboutUsInfo h3 {
+.aboutUs .aboutUsInfo h3 {
   color: white;
   margin-bottom: 5%;
 }
 
-#aboutUs .aboutUsInfo p {
+.aboutUs .aboutUsInfo p {
   color: white;
   margin-bottom: 10%;
 }
 
-#aboutUs .aboutUsImage {
+.aboutUs .aboutUsImage {
   min-height: 350px;
   background-repeat: no-repeat !important;
 }
 
-#aboutUs .nopadding {
+.aboutUs .nopadding {
   padding: 0 !important;
 }
 
-#driverAbout {
+.driverAbout {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 35px;
@@ -862,12 +862,12 @@ li.dropdown-header.megaheader {
   background-size: cover;
 }
 
-#driverAbout .driverAboutInfo h3 {
+.driverAbout .driverAboutInfo h3 {
   color: white;
   font-size: 1.6em;
 }
 
-#contactUs {
+.contactUs {
   text-align: center;
   padding: 35px;
   background-size: cover;
@@ -875,105 +875,105 @@ li.dropdown-header.megaheader {
   background-repeat: no-repeat;
 }
 
-#contactUs .contact-title {
+.contactUs .contact-title {
   width: 55px;
   height: 2px;
   margin: 15px auto 10px auto;
   background: #cc4452;
 }
 
-#contactUs a {
+.contactUs a {
   text-decoration: none;
   color: black;
 }
 
-#contactUs i {
+.contactUs i {
   margin: 0px 15px;
 }
 
-#contactUsForm {
+.contactUsForm {
   margin-top: 70px;
 }
 
-#contactUsForm .contactUsTouch {
+.contactUsForm .contactUsTouch {
   margin-top: 17px;
   margin-bottom: 30px;
 }
 
-#contactUsForm .contactUsTouch h4 {
+.contactUsForm .contactUsTouch h4 {
   margin-bottom: 20px;
 }
 
-#contactUsForm .contact-title {
+.contactUsForm .contact-title {
   width: 45px;
   height: 2px;
   margin: 0px 0 30px 0;
   background: #cc4452;
 }
 
-#contactUsForm .contactUsDetails {
+.contactUsForm .contactUsDetails {
   margin-bottom: 30px;
 }
 
-#contactUsForm .contactUsDetails h4 {
+.contactUsForm .contactUsDetails h4 {
   margin-bottom: 20px;
 }
 
-#contactUsForm .contactUsDetails ul {
+.contactUsForm .contactUsDetails ul {
   padding: 0;
 }
 
-#contactUsForm .contactUsDetails ul li {
+.contactUsForm .contactUsDetails ul li {
   border-top: #e8e8e8 1px solid;
   list-style: none;
   min-height: 60px;
   padding: 22px;
 }
 
-#contactUsForm .contactUsDetails ul li:last-child {
+.contactUsForm .contactUsDetails ul li:last-child {
   border-bottom: #e8e8e8 1px solid;
 }
 
-#contactUsForm .contactUsDetails ul li i {
+.contactUsForm .contactUsDetails ul li i {
   font-size: 20px;
   padding-right: 15px;
   color: #26c281;
 }
 
-#contactUsForm .contactUsDetails ul li span {
+.contactUsForm .contactUsDetails ul li span {
   font-size: 15px;
   text-decoration: none;
 }
 
-#contactUsForm .contactUsSocial h4 {
+.contactUsForm .contactUsSocial h4 {
   margin-bottom: 20px;
 }
 
-#contactUsForm .contactUsSocial ul {
+.contactUsForm .contactUsSocial ul {
   padding: 0;
 }
 
-#contactUsForm .contactUsSocial ul li {
+.contactUsForm .contactUsSocial ul li {
   list-style: none;
   display: inline-block;
 }
 
-#contactUsForm .contactUsSocial ul li a {
+.contactUsForm .contactUsSocial ul li a {
   text-decoration: none;
 }
 
-#contactUsForm .contactUsSocial ul li i {
+.contactUsForm .contactUsSocial ul li i {
   color: #26c281;
   font-size: 25px;
   margin: 0 28px 0 0;
 }
 
-#contactUsForm #inputHelpBlock,
-#contactUsForm #exampleInputEmail1 {
+.contactUsForm #inputHelpBlock,
+.contactUsForm #exampleInputEmail1 {
   height: 47px;
 }
 
-#About {
+.About {
   text-align: center;
   padding: 35px;
   background-size: cover;
@@ -981,36 +981,36 @@ li.dropdown-header.megaheader {
   background-repeat: no-repeat;
 }
 
-#About a {
+.About a {
   text-decoration: none;
   color: black;
 }
 
-#About i {
+.About i {
   margin: 0px 15px;
 }
 
-#About__info {
+.About__info {
   margin: 60px 0px;
 }
 
-#About__info .About__ourmission h4 {
+.About__info .About__ourmission h4 {
   margin-bottom: 60px;
 }
 
-#About__info .About__ourmission p {
+.About__info .About__ourmission p {
   margin-bottom: 60px;
 }
 
-#About__info .About__wework h4 {
+.About__info .About__wework h4 {
   margin-bottom: 60px;
 }
 
-#About__info .About__wework .About__weworkImage {
+.About__info .About__wework .About__weworkImage {
   min-height: 335px;
 }
 
-#About__info .panel-heading {
+.About__info .panel-heading {
   background: #cc4452;
   color: white;
 }
@@ -1087,12 +1087,12 @@ li.dropdown-header.megaheader {
   color: #fff;
 }
 
-#driversUs .driversUsImage {
+.driversUs .driversUsImage {
   background-repeat: no-repeat;
   height: 350px;
 }
 
-#driversUs .driverUsInfo {
+.driversUs .driverUsInfo {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 35px;
@@ -1100,12 +1100,12 @@ li.dropdown-header.megaheader {
   min-height: 350px;
 }
 
-#driversUs .driverUsInfo h3 {
+.driversUs .driverUsInfo h3 {
   color: white;
   margin-bottom: 5%;
 }
 
-#driversUs .driverUsInfo p {
+.driversUs .driverUsInfo p {
   color: white;
   margin-bottom: 10%;
 }
