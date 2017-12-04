@@ -3,7 +3,7 @@
 @section('content')
     @include('frontend.partials.menu')
 <!-- SLOGAN BEGIN -->
-<section id="content"  style="background-image :url(./assets/images/4.jpg);background-repeat:no-repeat;">
+<section id="" class="content" style="background-image :url(./assets/images/4.jpg);background-repeat:no-repeat;">
   <div class="container">
   <div class="row">
      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -110,7 +110,7 @@
 
 <!-- ABOUT PASSENGER SECTION BEGIN -->
 
-<section id="passengerAbout" style="background:url(./assets/images/image5.jpg);">
+<section id="" class="passengerAbout" style="background:url(./assets/images/image5.jpg);">
   <div class="container">
     <div class="row">
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -135,7 +135,7 @@
 
 
 <!-- ABOUUS SECTION BEGIN -->
-<section id="aboutUs">
+<section id="" class="aboutUs">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -159,7 +159,7 @@
 <!-- ABOUTUS SECTION END -->
 
 <!-- DRIVERABOUT SECTION BEGIN -->
-<section id="driverAbout" style="background:url(./assets/images/image5.jpg);">
+<section id="" class="driverAbout" style="background:url(./assets/images/image5.jpg);">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -183,7 +183,7 @@
 <!-- DRIVERABOUT SECTION END -->
 
 
-<section id="driversUs">
+<section id="" class="driversUs">
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 nopadding">
