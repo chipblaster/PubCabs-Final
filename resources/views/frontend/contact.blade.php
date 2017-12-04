@@ -63,13 +63,10 @@
                     </div>
                     <div class="contactUsSocial">
                         <h4>Social Media</h4>
-                        
                         <ul>
-                            <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            @foreach ($socials as $social)
+                            <li><a href=""><i class="{{$social->icon}}" aria-hidden="true"></i></a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

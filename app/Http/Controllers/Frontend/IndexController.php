@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Social;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -17,7 +18,6 @@ class IndexController extends Controller
     public function index()
     {
         $about = About::all()->first();
-        $contact = Contact::all()->first();
         return view('frontend.index',compact('about','contact'));
     }
 
@@ -39,7 +39,8 @@ class IndexController extends Controller
     public function contact()
     {
         $contact = Contact::all()->first();
-        return view('frontend.contact',compact('contact'));
+        $socials = Social::all();
+        return view('frontend.contact',compact('contact','socials'));
     }
 
     /**

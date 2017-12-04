@@ -13,7 +13,7 @@
                </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
-               <div class="aboutUsImage" style="background:url(http://localhost:9090/assets/images/image2.jpg);">
+                <div class="aboutUsImage" style="background:url(http://localhost:9090/assets/images/image2.jpg);">
                </div>
             </div>
          </div>
