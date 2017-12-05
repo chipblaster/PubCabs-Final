@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Social;
-use App\Models\Driver;
+use App\Models\Driver; 
+use App\Models\Country; 
+use App\Models\Subscribe; 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -21,7 +23,8 @@ class IndexController extends Controller
         $about = About::all()->first();
         $contact=Contact::all()->first();
         $driver=Driver::all()->last();
-        return view('frontend.index',compact('about','contact','driver'));
+        $countries=Country::all();
+        return view('frontend.index',compact('about','contact','driver','countries'));
     }
 
 
@@ -46,6 +49,14 @@ class IndexController extends Controller
         return view('frontend.contact',compact('contact','socials'));
     }
 
+    public function subscribe(Request $request)
+    {
+        echo $request->type;
+
+        Subscribe::create($request->all());
+        return redirect()->route('/');
+
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -23,25 +23,28 @@
                        <div class="row marginAuto">
                           <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mobile-pull">
                              <article role="login">
-                                <form class="signup" action="index.html" method="post">
+                                <form class="signup" action="{{route('subscribe')}}" method="post">
                                    <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" name="first_name" placeholder="First Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="email" class="form-control" placeholder="Last Name">
+                                    <input type="text" class="form-control" name="last_name" placeholder="Last Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="email" class="form-control" placeholder="Email">
+                                      <input type="email" class="form-control" name="email" placeholder="Email">
                                    </div>
                                    <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Phone Number">
+                                      <input type="phone" class="form-control" name="phone" placeholder="Phone Number">
                                    </div>
-                                   <div class="form-group">
-                                      <select class="form-control">
-                                         <option disabled selected hidden>City</option>
-                                         <option>baku</option>
-                                         <option>Sumgayit</option>
+                                   <div class="form-group" name="country_id">
+                                      <select class="form-control" name="country_id">
+                                      @foreach($countries as $country)
+                                       <option value="{{$country->id}}">{{$country->name}}</option>
+                                       @endforeach
                                       </select>
+                                   </div>
+                                    <div class="form-group">
+                                      <input type="hidden" class="form-control" name="type" value="1">
                                    </div>
                                    <div class="form-group">
                                       <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
@@ -60,32 +63,31 @@
                        <div class="row marginAuto">
                           <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mobile-pull">
                              <article role="login">
-                                <form class="signup" action="index.html" method="post">
+                                <form class="signup" action="{{route('subscribe')}}" method="post">
                                    <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" class="form-control" name="first_name" placeholder="First Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="email" class="form-control" name="last_name" placeholder="Last Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Phone Number">
+                                      <input type="email" class="form-control" name="email" placeholder="Email">
                                    </div>
                                    <div class="form-group">
-                                      <input type="email" class="form-control" placeholder="Email Address">
+                                      <input type="text" class="form-control" name="phone" placeholder="Phone Number">
                                    </div>
-                                   <div class="form-group">
-                                      <select class="form-control">
-                                         <option disabled selected hidden>City</option>
-                                         <option>baku</option>
-                                         <option>Sumgayit</option>
+                                   <div class="form-group" name="country_id">
+                                      <select class="form-control" name="country_id">
+                                      @foreach($countries as $country)
+                                       <option value="{{$country->id}}">{{$country->name}}</option>
+                                       @endforeach
                                       </select>
                                    </div>
+                                    <div class="form-group">
+                                      <input type="hidden" class="form-control" name="type" value="0">
+                                   </div>
                                    <div class="form-group">
-                                      <select class="form-control">
-                                         <option disabled selected hidden>Zip Code</option>
-                                         <option>az1000</option>
-                                         <option>az1030</option>
-                                      </select>
+                                      <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
                                    </div>
                                    <div class="form-group">
                                       <input type="submit" class="btn-def btn-def-yel"  value="SUBMIT">

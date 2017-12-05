@@ -8,4 +8,5 @@ Route::get('/drivers','Frontend\DriverController@index')->name('drivers');
 Route::get('/drivers/single/{id}','Frontend\DriverController@show')->name('driver_single');
 Route::get('/riders','Frontend\RiderController@index')->name('riders');
 Route::get('/rider/single/{id}','Frontend\RiderController@show')->name('rider_single');
+Route::post('/subscribe','Frontend\IndexController@subscribe')->name('subscribe');
 
