@@ -1,0 +1,34 @@
+
+.location-icon ::before {
+    content: "\f041";
+    font-size: 30px;
+    left: -32px;
+    font-family: "FontAwesome";
+    line-height: 0px;
+    position: absolute;
+    top: 11px;
+    color: #fff;
+  }
+  
+  .phone-icon ::before {
+    content: "\f095";
+    font-size: 30px;
+    left: -32px;
+    font-family: "FontAwesome";
+    line-height: 0px;
+    position: absolute;
+    top: 24px;
+    color: #fff;
+  }
+  
+  .mail-icon ::before {
+    content: "\f0e0";
+    font-size: 30px;
+    left: -32px;
+    font-family: "FontAwesome";
+    line-height: 0px;
+    position: absolute;
+    top: 22px;
+    color: #fff;
+  }
+  

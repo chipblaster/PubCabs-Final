@@ -1054,41 +1054,9 @@ li.dropdown-header.megaheader {
   height: 40px;
 }
 
-.location-icon ::before {
-  content: "\F041";
-  font-size: 30px;
-  left: -32px;
-  font-family: "FontAwesome";
-  line-height: 0px;
-  position: absolute;
-  top: 11px;
-  color: #fff;
-}
-
-.phone-icon ::before {
-  content: "\F095";
-  font-size: 30px;
-  left: -32px;
-  font-family: "FontAwesome";
-  line-height: 0px;
-  position: absolute;
-  top: 24px;
-  color: #fff;
-}
-
-.mail-icon ::before {
-  content: "\F0E0";
-  font-size: 30px;
-  left: -32px;
-  font-family: "FontAwesome";
-  line-height: 0px;
-  position: absolute;
-  top: 22px;
-  color: #fff;
-}
-
 .driversUs .driversUsImage {
   background-repeat: no-repeat;
+  background-size: cover;
   height: 350px;
 }
 
@@ -1169,5 +1137,38 @@ li.dropdown-header.megaheader {
 .btn-def-gre2:hover {
   background-color: #ffd800;
   color: white;
+}
+
+.location-icon ::before {
+  content: "\F041";
+  font-size: 30px;
+  left: -32px;
+  font-family: "FontAwesome";
+  line-height: 0px;
+  position: absolute;
+  top: 11px;
+  color: #fff;
+}
+
+.phone-icon ::before {
+  content: "\F095";
+  font-size: 30px;
+  left: -32px;
+  font-family: "FontAwesome";
+  line-height: 0px;
+  position: absolute;
+  top: 24px;
+  color: #fff;
+}
+
+.mail-icon ::before {
+  content: "\F0E0";
+  font-size: 30px;
+  left: -32px;
+  font-family: "FontAwesome";
+  line-height: 0px;
+  position: absolute;
+  top: 22px;
+  color: #fff;
 }
 
