@@ -1,7 +1,7 @@
 @extends("layouts.frontend")
 @section("content")
 @include("frontend.partials.menu")
-@foreach ($drivers as $key => $driver)
+@foreach ($drivers->sortByDesc('id') as $key => $driver)
 <section {{$key%2==0 ? 'class=aboutUs' : 'class=driversUs'}}>
    <div class="container-fluid">
       <div class="row">

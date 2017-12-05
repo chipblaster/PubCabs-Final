@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Social;
+use App\Models\Driver;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,7 +20,8 @@ class IndexController extends Controller
     {
         $about = About::all()->first();
         $contact=Contact::all()->first();
-        return view('frontend.index',compact('about','contact'));
+        $driver=Driver::all()->last();
+        return view('frontend.index',compact('about','contact','driver'));
     }
 
 

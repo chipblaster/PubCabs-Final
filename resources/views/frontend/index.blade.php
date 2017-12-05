@@ -44,11 +44,7 @@
                                       </select>
                                    </div>
                                    <div class="form-group">
-                                      <select class="form-control">
-                                         <option disabled selected hidden>Zip Code</option>
-                                         <option>az1000</option>
-                                         <option>az1030</option>
-                                      </select>
+                                      <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
                                    </div>
                                    <div class="form-group">
                                       <input type="submit" class="btn-def btn-def-yel"  value="SUBMIT">
@@ -187,7 +183,7 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 nopadding">
-<div class="driversUsImage" style="background-image:url(./assets/images/image2.jpg);">
+<div class="driversUsImage" style="background-image:url({{asset('assets/upload/'.$driver->banner_img)}});">
 
 
 </div>
@@ -195,8 +191,8 @@
       <div class="col-md-6 nopadding">
 <div class="driverUsInfo">
     <h3>Drivers</h3>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea doloremque nesciunt sapiente pariatur porro reiciendis, corrupti et asperiores neque quia natus molestias expedita in a? Aut voluptate aspernatur maiores sequi.</p>
-    <a href="" class="btn-def btn-def-yel">Learn More</a>
+    <p>{{substr($driver->description,0,200)}}...</p>
+    <a href="{{route('drivers')}}" class="btn-def btn-def-yel">Learn More</a>
 
 </div>
       </div>
