@@ -16,7 +16,7 @@ class DriverController extends Controller
     public function index()
     {
         $drivers=Driver::all();
-        return view("frontend.drivers",compact('drivers'));
+        return view("frontend.driver.drivers",compact('drivers'));
     }
 
     /**
@@ -46,9 +46,10 @@ class DriverController extends Controller
      * @param  \App\Models\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function show(Driver $driver)
+    public function show($id)
     {
-        //
+        $driver=Driver::find($id);
+        return view('frontend.driver.single',compact('driver'));
     }
 
     /**

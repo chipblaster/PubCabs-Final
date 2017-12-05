@@ -18,6 +18,7 @@ class IndexController extends Controller
     public function index()
     {
         $about = About::all()->first();
+        $contact=Contact::all()->first();
         return view('frontend.index',compact('about','contact'));
     }
 

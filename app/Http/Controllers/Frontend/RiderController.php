@@ -15,8 +15,8 @@ class RiderController extends Controller
      */
     public function index()
     {
-        
-        return view('frontend.riders');
+        $riders=Rider::all();
+        return view('frontend.rider.riders',compact('riders'));
     }
 
     /**
@@ -46,9 +46,10 @@ class RiderController extends Controller
      * @param  \App\Models\Rider  $rider
      * @return \Illuminate\Http\Response
      */
-    public function show(Rider $rider)
+    public function show($id)
     {
-        //
+         $rider=Rider::find($id);
+        return view('frontend.rider.single',compact('rider'));
     }
 
     /**
