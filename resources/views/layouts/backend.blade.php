@@ -44,7 +44,7 @@
                 <div class="topbar-left">
                     <a href="index.html" class="logo">
                         <i class="zmdi zmdi-group-work icon-c-logo"></i>
-                        <span>Uplon</span></a>
+                        <span>PubCaps</span></a>
                 </div>
                 <nav class="navbar-custom">
                     <ul class="list-inline float-right mb-0">

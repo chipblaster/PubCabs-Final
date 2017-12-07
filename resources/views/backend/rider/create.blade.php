@@ -25,8 +25,8 @@
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-4 form-control-label">Description</label>
                                     <div class="col-sm-7">
-                                        <input type="email" placeholder="Description" name="description" required parsley-type="text" class="form-control"
-                                               id="inputEmail3">
+                                        <textarea  rows="4" placeholder="Description" name="description" required parsley-type="te xt" class="form-control"
+                                               id="inputEmail3"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">

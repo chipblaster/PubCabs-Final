@@ -72,7 +72,7 @@ class ContactController extends Controller
     public function update(Request $request, Contact $contact)
     {
         $contact->update($request->all());
-        return back();
+        return redirect()->route('contact.index');
     }
 
     /**

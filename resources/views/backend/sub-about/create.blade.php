@@ -33,8 +33,8 @@
                                 <div class="form-group row">
                                     <label for="desc" class="col-sm-4 form-control-label">Description</label>
                                     <div class="col-sm-7">
-                                        <input id="desc" type="text" name="description" placeholder="Description" required
-                                               class="form-control">
+                                         <textarea  rows="7" placeholder="Description" name="description" required parsley-type="te xt" class="form-control"
+                                               id="inputEmail3"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
