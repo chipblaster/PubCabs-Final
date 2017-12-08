@@ -26,10 +26,11 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav nav-justified">
-                <li class="active"><a href="{{route('about')}}"><strong>About Us</strong></a></li>
-                <li><a href="{{route('drivers')}}">Drivers</a></li>
-                <li><a href="{{route('riders')}}">Riders  </a></li>
-                <li><a href="{{route('contact')}}">Contact</a></li>
+                <li class="{{(request()->path() == '/') ? "active" : ''}}"><a href="{{route('index')}}">Home</a></li>
+                <li class="{{(request()->path() == 'about') ? "active" : ''}}"><a href="{{route('about')}}"><strong>About Us</strong></a></li>
+                <li class="{{(request()->path() == 'drivers') ? "active" : ''}}"><a href="{{route('drivers')}}">Drivers</a></li>
+                <li class="{{(request()->path() == 'riders') ? "active" : ''}}"><a href="{{route('riders')}}">Riders  </a></li>
+                <li class="{{(request()->path() == 'contact') ? "active" : ''}}"><a href="{{route('contact')}}">Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container -->

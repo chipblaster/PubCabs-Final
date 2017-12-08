@@ -1,4 +1,6 @@
-@extends('layouts.frontend') @section('title','Contact Us') @section('content')
+@extends('layouts.frontend') @section('title','Contact Us')
+@section('content')
+    @include('frontend.partials.menu')
 <!-- CONTACTUS SECTION BEGIN -->
 <section id="" class="contactUs" style="background:url({{asset('assets/images/image28.jpg')}})">
     <div class="row">

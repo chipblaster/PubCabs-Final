@@ -185,7 +185,7 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 nopadding">
-<div class="driversUsImage" style="background-image:url({{asset('assets/upload/'.$driver->banner_img)}});">
+<div class="driversUsImage" style="background-image:url('{{asset('assets/upload/'.$driver->banner_img)}}');">
 
 
 </div>
@@ -203,5 +203,5 @@
   </div>
   <div class="clearfix"></div>
 </section>
-@include('frontend.partials.footer')
+{{--@include('frontend.partials.footer')--}}
 @endsection

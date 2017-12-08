@@ -3,6 +3,7 @@
    @include('frontend.partials.header')
    <body>
       @yield('content')
+      @include('frontend.partials.footer')
    </body>
 </html>
 <script>

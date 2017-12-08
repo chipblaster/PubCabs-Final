@@ -11,13 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
-
 Auth::routes();
 
-Route::get('/home', 'WebController@index')->name('home');
+Route::get('/home', 'WebController@home')->name('home');
 Route::post('/login','WebController@error');
 Route::get('/login','WebController@error')->name('login');
 Route::get('/register','WebController@error');
