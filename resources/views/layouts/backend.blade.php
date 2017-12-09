@@ -3,14 +3,13 @@
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-        <meta name="author" content="Coderthemes">
-
+        <meta name="google" content="nositelinkssearchbox" />
+        <meta name="robots" content="noindex,nofollow">
         <!-- App Favicon -->
         <link rel="shortcut icon" href="{{asset('admin_assets/images/favicon.ico')}}">
 
         <!-- App title -->
-        <title>Uplon - Responsive Admin Dashboard Template</title>
+        <title>PubCap</title>
 
         <!--calendar css-->
         <link href="{{asset('admin_assets/plugins/fullcalendar/css/fullcalendar.min.css')}}" rel="stylesheet" />
@@ -44,7 +43,7 @@
                 <div class="topbar-left">
                     <a href="index.html" class="logo">
                         <i class="zmdi zmdi-group-work icon-c-logo"></i>
-                        <span>PubCaps</span></a>
+                        <span>PubCap</span></a>
                 </div>
                 <nav class="navbar-custom">
                     <ul class="list-inline float-right mb-0">
@@ -59,10 +58,14 @@
                                     <h5 class="text-overflow"><small>Welcome ! {{Auth::user()->name}}</small> </h5>
                                 </div>
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="dropdown-item notify-item">
                                     <i class="zmdi zmdi-power"></i> <span>Logout</span>
                                 </a>
-
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                             </div>
                         </li>
 

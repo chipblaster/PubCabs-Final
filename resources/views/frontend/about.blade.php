@@ -1,6 +1,7 @@
 @extends('layouts.frontend')
 @section('title','About')
 @section('content')
+    @include('frontend.partials.menu')
     <!-- ABOUT SECTION BEGIN -->
     <section id="" class="About" style="background:url('{{asset('assets/images/image28.jpg')}}')">
         <div class="row">
