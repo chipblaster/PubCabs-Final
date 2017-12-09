@@ -57,6 +57,13 @@ class IndexController extends Controller
         return redirect()->route('/');
 
     }
+
+
+
+    public function mail()
+    {
+        echo "mail";
+    }
     /**
      * Show the form for creating a new resource.
      *

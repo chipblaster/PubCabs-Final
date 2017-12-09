@@ -26,7 +26,7 @@ Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm'
 /**
  *   Custom  routes for admin
  */
-Route::get('/secret/pubcabs','WebController@admin_login');
+Route::get('/secret/pubcabs/','WebController@admin_login')->name('admin_login');
 Route::post('/secret/pubcabs/','WebController@post_admin')->name('post_admin');
 
 /**

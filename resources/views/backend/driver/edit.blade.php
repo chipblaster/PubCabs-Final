@@ -24,6 +24,12 @@
                             <form role="form" data-parsley-validate novalidate action="{{route('driver.update',['id' => $driver->id])}}" method="post" enctype="multipart/form-data">
                             	{{csrf_field()}}
                                 {{method_field('PUT')}}
+                                <div class="form-group row">
+                                    <label for="hori-pass1" class="col-sm-4 form-control-label">Title</label>
+                                    <div class="col-sm-7">
+                                         <input type="text" required parsley-type="text" class="form-control" placeholder="Title" name="title" value="{{$driver->title}}" />
+                                    </div>
+                                </div>
 	                            <div class="form-group row">
 	                                <label for="inputEmail3" class="col-sm-4 form-control-label">Description</label>
 	                                <div class="col-sm-7">

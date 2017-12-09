@@ -21,11 +21,16 @@
                         <div class="card-box">
                             <form role="form" data-parsley-validate novalidate action="{{route('rider.store')}}" method="post" enctype="multipart/form-data">
                                 {{csrf_field()}}
-                                
+                                <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-4 form-control-label">Title</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" placeholder="Title" name="title" required parsley-type="text" class="form-control" id="inputEmail3">
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-4 form-control-label">Description</label>
                                     <div class="col-sm-7">
-                                        <textarea  rows="4" placeholder="Description" name="description" required parsley-type="te xt" class="form-control"
+                                        <textarea  rows="4" placeholder="Description" name="description" required parsley-type="text" class="form-control"
                                                id="inputEmail3"></textarea>
                                     </div>
                                 </div>

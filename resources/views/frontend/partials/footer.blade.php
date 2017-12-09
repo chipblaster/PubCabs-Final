@@ -4,7 +4,7 @@
             <div class="col-md-5">
                 <div class="footer__wrapper">
                     <div class="footer__title">
-                        <h3 class="footer__titleText">about us</h3>
+                        <h3 class="footer__titleText">About us</h3>
                     </div>
                     <div class="footer__body">
                         <p class="footer__bodyText">

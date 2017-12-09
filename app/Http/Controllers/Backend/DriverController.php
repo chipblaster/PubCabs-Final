@@ -44,6 +44,7 @@ class DriverController extends Controller
         $data['description'] = $request->description;
         $data['banner_img'] = $banner_img_name;
         $data['content_img'] = $content_img_name;
+        $data['title']=$request->title;
         Driver::create($data);
         return redirect()->route('driver.index');
     }
@@ -70,7 +71,6 @@ class DriverController extends Controller
         return view('backend.driver.edit',compact('driver'));
     }
 
-
      /**
      * Update the specified resource in storage.
      *
@@ -85,6 +85,7 @@ class DriverController extends Controller
         $driver->description=$request->description;
         $driver->banner_img=$new_banner_img;
         $driver->content_img=$new_content_img;
+        $driver->title=$request->title;
         $driver->update();
         return redirect()->route('driver.index');
     } 

@@ -191,12 +191,11 @@
 </div>
       </div>
       <div class="col-md-6 nopadding">
-<div class="driverUsInfo">
-    <h3>Drivers</h3>
-    <p>{{substr($driver->description,0,200)}}...</p>
-    <a href="{{route('drivers')}}" class="btn-def btn-def-yel">Learn More</a>
-
-</div>
+        <div class="driverUsInfo">
+            <h3>{{$driver->title}}</h3>
+            <p>{{substr($driver->description,0,200)}}...</p>
+            <a href="{{route('drivers')}}" class="btn-def btn-def-yel">Learn More</a>
+        </div>
       </div>
       
     </div>
