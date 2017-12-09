@@ -35,13 +35,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                          @foreach ($subscribes->sortByDesc('id') as $subscribe)
+                          @foreach ($subscribes as $subscribe)
                             <tr>
+                               
                                 <td>{{ $subscribe->first_name }}</td>
                                 <td>{{ $subscribe->last_name }}</td>
                                 <td>{{ $subscribe->email }}</td>
                                 <td>{{ $subscribe->phone }}</td>
-                                <td>{{ $subscribe->country_id }}</td>
+                                <td>{{ $subscribe->country_id}}</td>
                                 <td>{{ $subscribe->zip_code }}</td>
                                 <td>{{ $subscribe->type == "1" ? "Driver" : "Rider"}}</td>
                             </tr>
@@ -62,4 +63,3 @@
 
     </div>
 @endsection
-s

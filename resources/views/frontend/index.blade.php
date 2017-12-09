@@ -24,6 +24,7 @@
                           <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mobile-pull">
                              <article role="login">
                                 <form class="signup" action="{{route('subscribe')}}" method="post">
+                                  {{csrf_field()}}
                                    <div class="form-group">
                                     <input type="text" class="form-control" name="first_name" placeholder="First Name">
                                    </div>
@@ -64,11 +65,12 @@
                           <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mobile-pull">
                              <article role="login">
                                 <form class="signup" action="{{route('subscribe')}}" method="post">
+                                  {{csrf_field()}}
                                    <div class="form-group">
                                     <input type="text" class="form-control" name="first_name" placeholder="First Name">
                                    </div>
                                    <div class="form-group">
-                                    <input type="email" class="form-control" name="last_name" placeholder="Last Name">
+                                    <input type="text" class="form-control" name="last_name" placeholder="Last Name">
                                    </div>
                                    <div class="form-group">
                                       <input type="email" class="form-control" name="email" placeholder="Email">

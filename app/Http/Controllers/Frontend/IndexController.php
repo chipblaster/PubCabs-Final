@@ -51,11 +51,8 @@ class IndexController extends Controller
 
     public function subscribe(Request $request)
     {
-        echo $request->type;
-
         Subscribe::create($request->all());
-        return redirect()->route('/');
-
+        return back();
     }
 
 
