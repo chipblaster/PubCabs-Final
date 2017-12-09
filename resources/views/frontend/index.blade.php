@@ -110,32 +110,27 @@
 
 <!-- ABOUT PASSENGER SECTION BEGIN -->
 
-<section id="" class="passengerAbout" style="background:url(./assets/images/image5.jpg);">
+
+<!-- ABOUT PASSENGER SECTION END -->
+<section>
+
+<div id="" class="passengerAbout" style="background:url(./assets/images/image5.jpg) no-repeat;">
   <div class="container">
     <div class="row">
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
    <div class="row">
-<div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="passengerAboutInfo">
   <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque veniam </h3>
 </div>
 </div>
-<div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
-  <div class="passengerAboutBtn">
-    <a href="" class="btn-def btn-def-brow">Learn More!</a>
-  </div>
-</div>
+
  </div>
 </div>
     </div>
   </div>
-</section>
-
-<!-- ABOUT PASSENGER SECTION END -->
-
-
-<!-- ABOUUS SECTION BEGIN -->
-<section id="" class="aboutUs">
+</div>
+<div id="" class="aboutUs">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -155,39 +150,35 @@
       </div>
     </div>
   </div>
+</div>
 </section>
+
+<!-- ABOUUS SECTION BEGIN -->
+
 <!-- ABOUTUS SECTION END -->
 
 <!-- DRIVERABOUT SECTION BEGIN -->
-<section id="" class="driverAbout" style="background:url(./assets/images/image5.jpg);">
+<section>
+<div id="" class="driverAbout" style="background:url(./assets/images/image5.jpg);">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         
-          <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="driverAboutInfo">
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel atque veniam </h3>
           </div>
           </div>
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
-            <div class="driverAboutBtn">
-              <a href="" class="btn-def btn-def-brow">Learn More!</a>
-            </div>
-        
-           </div>
+       
       </div>
     </div>
   </div>
-</section>
-
-<!-- DRIVERABOUT SECTION END -->
-
-
-<section id="" class="driversUs">
+</div>
+<div id="" class="driversUs">
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 nopadding">
-<div class="driversUsImage" style="background-image:url('{{asset('assets/upload/'.$driver->banner_img)}}');">
+<div class="driversUsImage" style="background:url('{{asset('assets/upload/'.$driver->banner_img)}}');">
 
 
 </div>
@@ -203,6 +194,14 @@
     </div>
   </div>
   <div class="clearfix"></div>
+</div>
+
 </section>
+
+
+<!-- DRIVERABOUT SECTION END -->
+
+
+
 {{--@include('frontend.partials.footer')--}}
 @endsection
