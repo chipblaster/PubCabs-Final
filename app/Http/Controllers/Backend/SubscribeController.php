@@ -19,6 +19,18 @@ class SubscribeController extends Controller
         return view('backend.subscribe.index',compact('subscribes'));
     }
 
+
+    public function block(Request $request)
+    { 
+        if ($request->ajax()) 
+        {
+       
+        Subscribe::where('id', $request->id)
+            ->update(['is_block' => '1']);
+          return response()->json(true);
+        }
+       
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -46,7 +58,7 @@ class SubscribeController extends Controller
      * @param  \App\Models\Subscribe  $subscribe
      * @return \Illuminate\Http\Response
      */
-    public function show(Subscribe $subscribe)
+    public function show()
     {
         //
     }

@@ -21,6 +21,7 @@ class CreateSubscribesTable extends Migration
             $table->string('phone');
             $table->string('zip_code');
             $table->boolean('type');
+            $table->boolean('is_block');
             $table->integer('country_id')->unsigned()->index();
             $table->timestamps();
 

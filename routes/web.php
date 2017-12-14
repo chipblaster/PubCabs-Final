@@ -36,5 +36,5 @@ include __DIR__.'/frontend/web.php';
  */
 
 Route::group(['middleware' => 'auth','prefix' => 'admin'],function (){
-    include __DIR__.'/backend/web.php';
+    include __DIR__.'/backend/web.php'; 
 });
