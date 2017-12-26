@@ -17,14 +17,28 @@
                 </div>
                 <!-- end row -->
 
+                     @if(Session::has('status'))
+                    <div class="alert alert-info">
+                        <a class="close" data-dismiss="alert">×</a>
+                        <strong>{{ session('status') }}</strong>
+                    </div>
+                     @endif
 
                 <div class="row">
                     <div class="col-12">
                         
                        <div class="card-box">
-                        <table id="datatable" class="table table-striped table-bordered">
+                        <form action="{{route('subscribe_mail')}}" method="POST">
+                            {{csrf_field()}}
+                        <table id="datatable" class="table table-bordered select" cellspacing="0" width="100%">
                             <thead class="thead-default">
                             <tr>
+                                <th>
+                                <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" id="checkbox-select-all" name="select_all">
+                                    <label for="checkbox-select-all"></label>
+                                </div>
+                                </th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Email</th>
@@ -36,22 +50,40 @@
                             </tr>
                             </thead>
                             <tbody>
-                          @foreach ($subscribes->sortByDesc('id') as $subscribe)
+                               
+                          @foreach ($subscribes->sortByDesc('id') as $key => $subscribe)
+
                             <tr>
+                                <td>
+                                <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" id="checkbox-select-{{$subscribe->id}}" class="select_single" name="id[]" value="{{$subscribe->id}}">
+                                     <label for="checkbox-select-{{$subscribe->id}}"></label>
+                                </div>
+                                </td>
                                 <td>{{ $subscribe->first_name }}</td>
                                 <td>{{ $subscribe->last_name }}</td>
                                 <td>{{ $subscribe->email }}</td>
                                 <td>{{ $subscribe->phone }}</td>
-                                <td>{{ $subscribe->country_id}}</td>
+                                <td>{{ $subscribe->country->name}}</td>
                                 <td>{{ $subscribe->zip_code }}</td>
                                 <td>{{ $subscribe->type == "1" ? "Driver" : "Rider"}}</td>
                                 <td>
-                                    <input type="checkbox" {{$subscribe->is_block == "1" ? 'checked' : ""}} class="block" name="is_block" data-id="{{$subscribe->id}}" value="0">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-{{$subscribe->id}}" type="checkbox" {{$subscribe->is_block == "1" ? 'checked' : ""}} class="block" name="is_block">
+                                    <label for="checkbox-{{$subscribe->id}}"></label>
+                                </div>
                                 </td>
                             </tr>
                             @endforeach
                             </tbody>
                         </table>
+                         <div class="form-group">
+                            <label>Message </label>
+                            <textarea  name="message" class="form-control"></textarea>
+                        </div>
+                        <input class="form-control btn btn-info" type="submit" name="" value="submit">
+                        </form>
+
                     </div>
                     </div>
                 </div>
@@ -82,6 +114,7 @@
         <!-- Responsive examples -->
         <script src="{{asset('assets/plugins/datatables/dataTables.responsive.min.js')}}"></script>
         <script src="{{asset('assets/plugins/datatables/responsive.bootstrap4.min.js')}}"></script>
+      
  <script type="text/javascript">
             $(document).ready(function() {
                $.ajaxSetup({
@@ -89,16 +122,26 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 });
-                $('#datatable').DataTable();
-
-                //Buttons examples
-                var table = $('#datatable-buttons').DataTable({
-                    lengthChange: false,
-                    buttons: ['copy', 'excel', 'pdf']
+                var table =$('#datatable').DataTable();
+                // $('#datatable thead #datatable-select-all').on( 'click', function () 
+                // {
+                //     // toggleClass('selected');
+                //     console.log("yes");
+                // } );
+              
+               
+                $('#checkbox-select-all').on('click', function(){
+                   // Get all rows with search applied
+                   var rows = table.rows({ 'search': 'applied' }).nodes();
+                   // Check/uncheck checkboxes for all rows in the table
+                   var checkeds=$(".select_single", rows).prop('checked', this.checked);
+                   checkeds.each(function(i)
+                   {
+                     var val = [];
+                     val[i] = $(this).val();
+                        $('.result').append(val[i]);
+                   });
                 });
-
-                table.buttons().container()
-                        .appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 
                 $('.block').change(function(){
                     if (this.checked) 

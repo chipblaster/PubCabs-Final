@@ -7,5 +7,6 @@ Route::resource('/social','Backend\SocialController');
 Route::resource('/sub-about','Backend\SubAboutController');
 Route::resource('/subscribe','Backend\SubscribeController');
 Route::get('/subscribe/block/user','Backend\SubscribeController@block');
+Route::post('/subscribe/mail','Backend\SubscribeController@mail')->name('subscribe_mail');
 Route::resource('/driver','Backend\DriverController');
 Route::resource('/rider','Backend\RiderController');

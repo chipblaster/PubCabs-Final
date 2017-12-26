@@ -21,26 +21,32 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                   @if(Session::has('status'))
+                    <div class="alert alert-info">
+                        <a class="close" data-dismiss="alert">×</a>
+                        <strong>{{ session('status') }}</strong>
+                    </div>
+                     @endif
                     <form action="{{route('mail')}}" method="post">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                            <input type="text" name="name" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
                         </div>
 
                         <div class="form-group">
                             <label>Email </label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1">
                         </div>
 
                         <div class="form-group">
                             <label>Subject</label>
-                            <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                            <input type="text" name="subject" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
                         </div>
 
                         <div class="form-group">
                             <label>Text</label>
-                            <textarea class="form-control" rows="10"></textarea>
+                            <textarea class="form-control" name="text" rows="10"></textarea>
                         </div>
                         <button type="submit" class="btn-def btn-def-gre2">Send<i class="fa fa-envelope" aria-hidden="true"></i></button>
                     </form>

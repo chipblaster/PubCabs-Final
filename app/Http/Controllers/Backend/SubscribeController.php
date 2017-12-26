@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
+use Mail;
 use App\Models\Subscribe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -24,13 +24,44 @@ class SubscribeController extends Controller
     { 
         if ($request->ajax()) 
         {
-       
-        Subscribe::where('id', $request->id)
-            ->update(['is_block' => '1']);
+         Subscribe::where('id', $request->id)
+                    ->update(['is_block' => '1']);
           return response()->json(true);
         }
        
     }
+    public function mail(Request $request)
+    {
+        $subscribes=Subscribe::find($request->id);
+        foreach ($subscribes as $key => $subscribe) 
+        {
+            $data = array(
+            'text' => $request->message, 
+            'name' => $subscribe->first_name, 
+            );
+
+            Mail::send('backend.subscribe.email', $data, function($message) use ($subscribe) {
+            $message->to($subscribe->email, 'PubCap')
+                     ->subject("PubCap Admin");
+            $message->from("demo@admin.com","PubCap");
+
+            });
+            if( count(Mail::failures()) > 0 ) 
+            {
+                foreach(Mail::failures as $email_address) 
+                {
+                    $request->session()->flash('status', 'There was one or more failures. They were: <br />'.$email_address);
+                }
+            } 
+            else 
+            {
+               $request->session()->flash('status', 'No errors, all sent successfully!');
+            }
+        }
+
+         return back();
+
+    }       
     /**
      * Show the form for creating a new resource.
      *

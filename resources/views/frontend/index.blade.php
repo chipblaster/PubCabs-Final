@@ -12,6 +12,12 @@
               <div class="login-signup">
                  <div class="row marginAuto">
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 nav-tab-holder">
+                       @if(Session::has('status'))
+                      <div class="alert alert-success">
+                          <a class="close" data-dismiss="alert">×</a>
+                          <strong>{{ session('status') }}</strong>
+                      </div>
+                     @endif
                        <ul class="nav nav-tabs row" role="tablist">
                           <li role="presentation" class="active col-sm-6"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="" >Subscribe as driver</a></li>
                           <li role="presentation" class="col-sm-6"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Subscribe as rider</a></li>
@@ -46,7 +52,10 @@
                                    </div>
                                     <div class="form-group">
                                       <input type="hidden" class="form-control" name="type" value="1">
-                                   </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="hidden" class="form-control" name="is_block" value="1">
+                                    </div>
                                    <div class="form-group">
                                       <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
                                    </div>

@@ -10,6 +10,6 @@ class Subscribe extends Model
 
     public function country()
     {
-        return $this->belongsTo('App\Models\Country','id');
+        return $this->belongsTo('App\Models\Country');
     }
 }

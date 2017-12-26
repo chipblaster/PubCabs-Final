@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-
+use Mail;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Social;
@@ -10,7 +10,6 @@ use App\Models\Country;
 use App\Models\Subscribe; 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 class IndexController extends Controller
 {
     /**
@@ -52,14 +51,29 @@ class IndexController extends Controller
     public function subscribe(Request $request)
     {
         Subscribe::create($request->all());
+        $request->session()->flash('status', 'You was subscribed successfully  !');
         return back();
     }
 
 
 
-    public function mail()
+    public function mail(Request $request)
     {
-        echo "mail";
+        $data = array(
+            'name' => $request->name, 
+            'email' => $request->email, 
+            'subject' => $request->subject, 
+            'text' => $request->text 
+        );
+        Mail::send('email.email', $data, function($message) {
+            $message->to('lalamamedova97@gmail.com', 'saytdan')
+                     ->subject("PubCap User");
+            $message->from("demo@admin.com","PubCap");
+        });
+        
+        $request->session()->flash('status', 'Email was sent successfully!');
+        return redirect()->route('contact');
+
     }
     /**
      * Show the form for creating a new resource.
