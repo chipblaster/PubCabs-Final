@@ -183,14 +183,12 @@
     </div>
   </div>
 </div>
+@if($driver)
 <div id="" class="driversUs">
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 nopadding">
-<div class="driversUsImage" style="background:url('{{asset('assets/upload/'.$driver->banner_img)}}');">
-
-
-</div>
+        <div class="driversUsImage" style="background:url('{{asset('assets/upload/'.$driver->banner_img)}}');"></div>
       </div>
       <div class="col-md-6 nopadding">
         <div class="driverUsInfo">
@@ -204,6 +202,8 @@
   </div>
   <div class="clearfix"></div>
 </div>
+@endif
+
 
 </section>
 
