@@ -26,5 +26,11 @@
    }
    });
     })(jQuery);
+
+    $.validate({
+        modules: 'location, date, security, file'
+       
+    });
 </script>
+
 <!-- FOOTER -->

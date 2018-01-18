@@ -56,7 +56,7 @@
                             <tr>
                                 <td>
                                 <div class="checkbox checkbox-primary">
-                                    <input type="checkbox" id="checkbox-select-{{$subscribe->id}}" class="select_single" name="id[]" value="{{$subscribe->id}}">
+                                    <input  type="checkbox" id="checkbox-select-{{$subscribe->id}}" class="select_single" name="id[]" value="{{$subscribe->id}}">
                                      <label for="checkbox-select-{{$subscribe->id}}"></label>
                                 </div>
                                 </td>

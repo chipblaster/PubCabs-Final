@@ -31,22 +31,22 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="name" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                            <input type="text" data-validation="required" name="name" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
                         </div>
 
                         <div class="form-group">
                             <label>Email </label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1">
+                            <input type="email" data-validation="required" name="email" class="form-control" id="exampleInputEmail1">
                         </div>
 
                         <div class="form-group">
                             <label>Subject</label>
-                            <input type="text" name="subject" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                            <input type="text" data-validation="required" name="subject" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
                         </div>
 
                         <div class="form-group">
                             <label>Text</label>
-                            <textarea class="form-control" name="text" rows="10"></textarea>
+                            <textarea class="form-control" data-validation="required" name="text" rows="10"></textarea>
                         </div>
                         <button type="submit" class="btn-def btn-def-gre2">Send<i class="fa fa-envelope" aria-hidden="true"></i></button>
                     </form>

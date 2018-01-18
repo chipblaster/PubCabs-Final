@@ -32,16 +32,16 @@
                                 <form class="signup" action="{{route('subscribe')}}" method="post">
                                   {{csrf_field()}}
                                    <div class="form-group">
-                                    <input type="text" class="form-control" name="first_name" placeholder="First Name">
+                                    <input type="text" data-validation="required" class="form-control" name="first_name" placeholder="First Name">
                                    </div>
                                    <div class="form-group">
-                                    <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+                                    <input type="text" data-validation="required" class="form-control" name="last_name" placeholder="Last Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="email" class="form-control" name="email" placeholder="Email">
+                                      <input type="email" data-validation=" server email required" class="form-control" name="email" placeholder="Email" id="reg_email" data-validation-url="route('checkEmail')">
                                    </div>
                                    <div class="form-group">
-                                      <input type="phone" class="form-control" name="phone" placeholder="Phone Number">
+                                      <input type="phone" data-validation="required" class="form-control" name="phone" placeholder="Phone Number">
                                    </div>
                                    <div class="form-group" name="country_id">
                                       <select class="form-control" name="country_id">
@@ -57,7 +57,7 @@
                                       <input type="hidden" class="form-control" name="is_block" value="1">
                                     </div>
                                    <div class="form-group">
-                                      <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
+                                      <input type="text" data-validation="required" class="form-control" name="zip_code" placeholder="Zip Code">
                                    </div>
                                    <div class="form-group">
                                       <input type="submit" class="btn-def btn-def-yel"  value="SUBMIT">

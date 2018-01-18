@@ -31,7 +31,8 @@
         <link href="{{asset('assets/plugins/fileuploads/css/dropify.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- Modernizr js --> 
         <script src="{{asset('admin_assets/js/modernizr.min.js')}}"></script>
-
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+        
     </head>
 
     <body class="fixed-left">
@@ -175,6 +176,7 @@
         <!-- App js -->
         <script src="{{asset('admin_assets/js/jquery.core.js')}}"></script>
         <script src="{{asset('admin_assets/js/jquery.app.js')}}"></script>
+
         <script type="text/javascript">
             $.ajaxSetup({
                 headers: {

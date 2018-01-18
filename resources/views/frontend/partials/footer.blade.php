@@ -22,7 +22,7 @@
                         <p class="footer__bodyText">
                             Subscribe to our newsletter for news, updates, exclusive discounts and offers.
                         </p>
-                        <form class="signup" action="index.html" method="post">
+                        <form class="signup" action="" method="post">
                             <div class="form-group">
                                 <input type="submit" class="btn-def btn-def-gre"  value="Subscribe">
 
