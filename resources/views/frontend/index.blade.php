@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('title','Index')
+@section('title','Pubcabs')
 @section('content')
     @include('frontend.partials.menu')
 <!-- SLOGAN BEGIN -->
@@ -38,7 +38,7 @@
                                     <input type="text" data-validation="required" class="form-control" name="last_name" placeholder="Last Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="email" data-validation=" server email required" class="form-control" name="email" placeholder="Email" id="reg_email" data-validation-url="route('checkEmail')">
+                                      <input type="email" data-validation="required" class="form-control" name="email" placeholder="Email" id="reg_email" >
                                    </div>
                                    <div class="form-group">
                                       <input type="phone" data-validation="required" class="form-control" name="phone" placeholder="Phone Number">
