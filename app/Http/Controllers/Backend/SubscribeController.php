@@ -41,7 +41,7 @@ class SubscribeController extends Controller
 
             Mail::send('backend.subscribe.email', $data, function($message) use ($subscribe) {
             $message->to($subscribe->email, 'PubCap')
-                     ->subject("PubCap Admin");
+                     ->subject("PubCabs");
             $message->from("demo@admin.com","PubCap");
 
             });

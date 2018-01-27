@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('title','Index')
+@section('title','Pubcabs')
 @section('content')
     @include('frontend.partials.menu')
 <!-- SLOGAN BEGIN -->
@@ -38,7 +38,7 @@
                                     <input type="text" data-validation="required" class="form-control" name="last_name" placeholder="Last Name">
                                    </div>
                                    <div class="form-group">
-                                      <input type="email" data-validation=" server email required" class="form-control" name="email" placeholder="Email" id="reg_email" data-validation-url="route('checkEmail')">
+                                      <input type="email" data-validation="required" class="form-control" name="email" placeholder="Email" id="reg_email" >
                                    </div>
                                    <div class="form-group">
                                       <input type="phone" data-validation="required" class="form-control" name="phone" placeholder="Phone Number">
@@ -123,7 +123,7 @@
 <!-- ABOUT PASSENGER SECTION END -->
 <section>
 
-<div id="" class="passengerAbout" style="background:url(./assets/images/image5.jpg) no-repeat;">
+{{--  <div id="" class="passengerAbout" style="background:url(./assets/images/image5.jpg) no-repeat;">
   <div class="container">
     <div class="row">
  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -138,7 +138,7 @@
 </div>
     </div>
   </div>
-</div>
+</div>  --}}
 <div id="" class="aboutUs">
   <div class="container-fluid">
     <div class="row">
@@ -168,7 +168,7 @@
 
 <!-- DRIVERABOUT SECTION BEGIN -->
 <section>
-<div id="" class="driverAbout" style="background:url(./assets/images/image5.jpg);">
+{{--  <div id="" class="driverAbout" style="background:url(./assets/images/image5.jpg);">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -182,7 +182,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>  --}}
 @if($driver)
 <div id="" class="driversUs">
   <div class="col-md-12">

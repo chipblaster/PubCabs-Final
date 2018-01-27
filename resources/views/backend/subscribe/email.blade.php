@@ -1,3 +1,2 @@
- <p>Welcoe <strong>{{ $name }} ,</strong></p>
- İsmaric :
+ <p>Hi <strong>{{ $name }} ,</strong></p><br>
 <p>{{ $text }}</p>
