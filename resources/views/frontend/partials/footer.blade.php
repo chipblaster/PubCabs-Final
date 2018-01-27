@@ -4,7 +4,7 @@
             <div class="col-md-5">
                 <div class="footer__wrapper">
                     <div class="footer__title">
-                        <h3 class="footer__titleText">about us</h3>
+                        <h3 class="footer__titleText">About us</h3>
                     </div>
                     <div class="footer__body">
                         <p class="footer__bodyText">
@@ -22,7 +22,7 @@
                         <p class="footer__bodyText">
                             Subscribe to our newsletter for news, updates, exclusive discounts and offers.
                         </p>
-                        <form class="signup" action="index.html" method="post">
+                        <form class="signup" action="" method="post">
                             <div class="form-group">
                                 <input type="submit" class="btn-def btn-def-gre"  value="Subscribe">
 

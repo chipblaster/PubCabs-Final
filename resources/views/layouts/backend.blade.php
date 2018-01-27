@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google" content="nositelinkssearchbox" />
         <meta name="robots" content="noindex,nofollow">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- App Favicon -->
         <link rel="shortcut icon" href="{{asset('admin_assets/images/favicon.ico')}}">
 
@@ -23,13 +24,16 @@
         <!-- App CSS -->
         <link href="{{asset('admin_assets/css/style.css')}}" rel="stylesheet" type="text/css" />
 
+         <link href="{{asset('assets/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="{{asset('assets/plugins/datatables/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('assets/plugins/fileuploads/css/dropify.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- Modernizr js --> 
         <script src="{{asset('admin_assets/js/modernizr.min.js')}}"></script>
-
-
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+        
     </head>
-
 
     <body class="fixed-left">
 
@@ -173,6 +177,13 @@
         <script src="{{asset('admin_assets/js/jquery.core.js')}}"></script>
         <script src="{{asset('admin_assets/js/jquery.app.js')}}"></script>
 
+        <script type="text/javascript">
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        </script>
     </body>
 </html>
    @yield('script');

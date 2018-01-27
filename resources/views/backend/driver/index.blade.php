@@ -25,6 +25,7 @@
                         <table class="table">
                             <thead class="thead-default">
                             <tr>
+                                <th>Title</th>
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Content Image</th>
@@ -35,6 +36,7 @@
                             <tbody>
                           @foreach ($drivers->sortByDesc('id') as $driver)
                             <tr>
+                                <td>{{ $driver->title }}</td>
                                 <td>{{ $driver->description }}</td>
                                 <td><img width="100" src="{{asset('assets/upload/'.$driver->banner_img)}}" > </td>
                                 <td><img width="100" src="{{asset('assets/upload/'.$driver->content_img)}}" > </td>

@@ -3,8 +3,8 @@
 
 <section id="logo" class="container">
     <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <a href="logo__link">
+        <div class="col-l-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <a href="{{url('/')}}">
                 <div class="logo">
                     <h2>Logo</h2>
                 </div>

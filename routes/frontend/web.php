@@ -9,4 +9,5 @@ Route::get('/drivers/single/{id}','Frontend\DriverController@show')->name('drive
 Route::get('/riders','Frontend\RiderController@index')->name('riders');
 Route::get('/rider/single/{id}','Frontend\RiderController@show')->name('rider_single');
 Route::post('/subscribe','Frontend\IndexController@subscribe')->name('subscribe');
+Route::post('/mail','Frontend\IndexController@mail')->name('mail');
 

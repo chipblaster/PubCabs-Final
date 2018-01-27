@@ -9,7 +9,7 @@
             @if($key%2==0)
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
                <div class="aboutUsInfo">
-                  <h3>Drivers</h3>
+                  <h3>{{$driver->title}}</h3>
                   <p>{{substr($driver->description,0,200)}}...</p>
                   <a href="{{route('driver_single',['id' => $driver->id])}}" class="btn-def btn-def-yel">Learn More</a>
                </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-6 nopadding">
                <div class="driverUsInfo">
-                  <h3>Drivers</h3>
+                  <h3>{{$driver->title}}</h3>
                   <p>{{substr($driver->description,0,200)}}...</p>
                   <a href="{{route('driver_single',['id' => $driver->id])}}" class="btn-def btn-def-yel">Learn More</a>
                </div>

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Driver extends Model
 {
-    protected $fillable = ['description','banner_img','content_img'];
+    protected $fillable = ['title','description','banner_img','content_img'];
 }

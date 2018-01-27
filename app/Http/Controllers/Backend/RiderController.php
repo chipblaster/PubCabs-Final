@@ -44,6 +44,7 @@ class RiderController extends Controller
         $data['description']=$request->description;
          $data['banner_img'] = $banner_img_name;
         $data['content_img'] = $content_img_name;
+        $data['title']=$request->title;
         Rider::create($data);
         return redirect()->route('rider.index');
     }
@@ -84,6 +85,7 @@ class RiderController extends Controller
         $rider->description=$request->description;
         $rider->banner_img=$new_banner_img;
         $rider->content_img=$new_content_img;
+        $rider->title=$request->title;
         $rider->update();
         return redirect()->route('rider.index');
     }

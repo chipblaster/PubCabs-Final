@@ -37,5 +37,8 @@ class WebController extends Controller
             // Authentication passed...
             return redirect(route('admin'));
         }
+        else
+            return redirect(route('admin_login'));
+
     }
 }

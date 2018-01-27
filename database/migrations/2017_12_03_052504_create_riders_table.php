@@ -15,6 +15,7 @@ class CreateRidersTable extends Migration
     {
         Schema::create('riders', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
             $table->text('description');
             $table->string('banner_img');
             $table->string('content_img');

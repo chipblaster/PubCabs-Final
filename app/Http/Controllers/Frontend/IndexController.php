@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-
+use App\Http\Requests\SubscribeRequest;
+use Mail;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Social;
@@ -10,7 +11,6 @@ use App\Models\Country;
 use App\Models\Subscribe; 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 class IndexController extends Controller
 {
     /**
@@ -49,12 +49,32 @@ class IndexController extends Controller
         return view('frontend.contact',compact('contact','socials'));
     }
 
-    public function subscribe(Request $request)
+    public function subscribe(SubscribeRequest $request)
     {
-        echo $request->type;
-
+        $request->merge(['is_block' => 0]);
         Subscribe::create($request->all());
-        return redirect()->route('/');
+        $request->session()->flash('status', 'You was subscribed successfully  !');
+        return back();
+    }
+
+
+
+    public function mail(Request $request)
+    {
+        $data = array(
+            'name' => $request->name, 
+            'email' => $request->email, 
+            'subject' => $request->subject, 
+            'text' => $request->text 
+        );
+        Mail::send('email.email', $data, function($message) use($request) {
+            $message->to('galib.khaliloglu@gmail.com', 'from pubcabs')
+                     ->subject("PubCap User");
+            $message->from($request->email,"PubCap");
+        });
+        
+        $request->session()->flash('status', 'Email was sent successfully!');
+        return redirect()->route('contact');
 
     }
     /**

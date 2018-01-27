@@ -22,7 +22,7 @@ Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm'
 /**
  *   Custom  routes for admin
  */
-Route::get('/secret/pubcabs','WebController@admin_login');
+Route::get('/secret/pubcabs/','WebController@admin_login')->name('admin_login');
 Route::post('/secret/pubcabs/','WebController@post_admin')->name('post_admin');
 
 /**
@@ -36,5 +36,5 @@ include __DIR__.'/frontend/web.php';
  */
 
 Route::group(['middleware' => 'auth','prefix' => 'admin'],function (){
-    include __DIR__.'/backend/web.php';
+    include __DIR__.'/backend/web.php'; 
 });

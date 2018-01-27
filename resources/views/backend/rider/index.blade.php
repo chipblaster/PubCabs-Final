@@ -24,6 +24,7 @@
                         <table class="table">
                             <thead class="thead-default">
                             <tr>
+                                <th>Title</th>
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Content Image</th>
@@ -34,6 +35,7 @@
                             <tbody>
                           @foreach ($riders->sortByDesc('id') as $rider)
                             <tr>
+                                <td>{{ $rider->title }}</td>
                                 <td>{{ $rider->description }}</td>
                                 <td><img width="100" src="{{asset('assets/upload/'.$rider->banner_img)}}" > </td>
                                 <td><img width="100" src="{{asset('assets/upload/'.$rider->content_img)}}" > </td>
