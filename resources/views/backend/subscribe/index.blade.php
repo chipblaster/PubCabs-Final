@@ -23,7 +23,6 @@
                         <strong>{{ session('status') }}</strong>
                     </div>
                      @endif
-
                 <div class="row">
                     <div class="col-12">
                         
@@ -69,7 +68,7 @@
                                 <td>{{ $subscribe->type == "1" ? "Driver" : "Rider"}}</td>
                                 <td>
                                 <div class="checkbox checkbox-primary">
-                                    <input id="checkbox-{{$subscribe->id}}" type="checkbox" {{$subscribe->is_block == "1" ? 'checked' : ""}} class="block" name="is_block">
+                                    <input id="checkbox-{{$subscribe->id}}" data-id={{$subscribe->id}} type="checkbox" {{$subscribe->is_block == "1" ? 'checked' : ""}} class="block" name="is_block">
                                     <label for="checkbox-{{$subscribe->id}}"></label>
                                 </div>
                                 </td>
@@ -119,17 +118,11 @@
             $(document).ready(function() {
                $.ajaxSetup({
                     headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
                     }
                 });
                 var table =$('#datatable').DataTable();
-                // $('#datatable thead #datatable-select-all').on( 'click', function () 
-                // {
-                //     // toggleClass('selected');
-                //     console.log("yes");
-                // } );
-              
-               
+
                 $('#checkbox-select-all').on('click', function(){
                    // Get all rows with search applied
                    var rows = table.rows({ 'search': 'applied' }).nodes();
@@ -154,16 +147,18 @@
                     }
                     block=$(this).val();
                     id=$(this).data("id");
-                    console.log(block);
                     $.ajax({
-                            url: "/admin/subscribe/block/user",
-                            type: "GET",
+                            url: "/admin/subscribe/block/user/",
+                            type: "POST",
                             data:{
                                 id:id,
                                 block:block
                             },
                             success: function(result)
                             {
+                                console.log(result);
+                            },
+                            error:function(result){
                                 console.log(result);
                             }
                      });

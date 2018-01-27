@@ -25,11 +25,10 @@ class SubscribeController extends Controller
         if ($request->ajax()) 
         {
          Subscribe::where('id', $request->id)
-                    ->update(['is_block' => '1']);
-          return response()->json(true);
+                   ->update(['is_block' => $request->block]);
         }
-       
     }
+
     public function mail(Request $request)
     {
         $subscribes=Subscribe::find($request->id);
