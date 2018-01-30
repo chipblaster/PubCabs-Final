@@ -22,10 +22,9 @@
                         <p class="footer__bodyText">
                             Subscribe to our newsletter for news, updates, exclusive discounts and offers.
                         </p>
-                        <form class="signup" action="" method="post">
+                        <form class="signup" action="">
                             <div class="form-group">
-                                <input type="submit" class="btn-def btn-def-gre"  value="Subscribe">
-
+                                <a href="{{route('index')}}" class="btn-def btn-def-gre">subscribe</a>
                             </div>
                         </form>
                     </div>
@@ -36,14 +35,17 @@
                     <h3 class="footer__titleText">Contact Details</h3>
                 </div>
                 <div class="footer__listBody">
-                    <div class="col-md-12">
-                        <ul class="footer__listSection location-icon">
-                            <li class="footer__listRow">{{$contact->address}}</li>
-                        </ul>
-                    </div>
+                    <!-- <div class="col-md-12">
+                                <ul class="footer__listSection location-icon">
+                                    <li class="footer__listRow">{{$contact->address}}</li>
+                                </ul>
+                            </div> -->
                     <div class="col-md-12">
                         <ul class="footer__listSection phone-icon">
-                            <li class="footer__listRow">{{$contact->phone}}</li>
+
+                            <a href="tel:+16505752151" class="phone phone__modTwo">
+                                <li class="footer__listRow">{{$contact->phone}}</li>
+                            </a>
                             <li class="footer__listRow">Mon - Fri, 9.00am until 6.30pm</li>
                         </ul>
                     </div>

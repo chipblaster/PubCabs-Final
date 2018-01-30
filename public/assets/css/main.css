@@ -916,7 +916,7 @@ li.dropdown-header.megaheader {
 }
 
 .contactUsForm .contactUsDetails {
-  margin-bottom: 30px;
+  margin: 23px 0 30px 0;
 }
 
 .contactUsForm .contactUsDetails h4 {
@@ -967,8 +967,6 @@ li.dropdown-header.megaheader {
 }
 
 .contactUsForm .contactUsSocial ul li i {
-  color: #26c281;
-  font-size: 25px;
   margin: 0 28px 0 0;
 }
 
@@ -1086,6 +1084,10 @@ li.dropdown-header.megaheader {
   padding: 0px;
 }
 
+body {
+  font-size: 16px;
+}
+
 .btn-def {
   border-radius: 0;
   border: 0;
@@ -1111,6 +1113,7 @@ li.dropdown-header.megaheader {
 .btn-def-yel:hover {
   background-color: #333;
   color: #ffd800;
+  text-decoration: none;
 }
 
 .btn-def-brow {
@@ -1121,6 +1124,7 @@ li.dropdown-header.megaheader {
 .btn-def-brow:hover {
   background-color: #ffd800;
   color: #333;
+  text-decoration: none;
 }
 
 .btn-def-gre {
@@ -1131,17 +1135,69 @@ li.dropdown-header.megaheader {
 .btn-def-gre:hover {
   background-color: #26c281;
   color: #333;
+  text-decoration: none;
 }
 
 .btn-def-gre2 {
   background-color: #26c281;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .btn-def-gre2:hover {
   background-color: #ffd800;
   color: white;
+  text-decoration: none;
+}
+
+.phone__modOne {
+  color: #333;
+}
+
+.phone__modOne:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.phone__modTwo {
+  color: white;
+}
+
+.phone__modTwo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.envelope__ico {
+  margin-left: 10px;
+}
+
+.fs {
+  font-size: 16px;
+}
+
+.social__button--fb {
+  color: #3b5998;
+}
+
+.social__button--fb:hover {
+  color: #3b5998;
+}
+
+.social__button--tw {
+  color: #1dcaff;
+}
+
+.social__button--tw:hover {
+  color: #1dcaff;
+}
+
+.social__button--gp {
+  color: #d34836;
+}
+
+.social__button--gp:hover {
+  color: #d34836;
 }
 
 .location-icon ::before {
