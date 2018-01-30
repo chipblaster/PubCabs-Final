@@ -48,30 +48,34 @@
                             <label>Text</label>
                             <textarea class="form-control" data-validation="required" name="text" rows="10"></textarea>
                         </div>
-                        <button type="submit" class="btn-def btn-def-gre2">Send<i class="fa fa-envelope" aria-hidden="true"></i></button>
+                        <button type="submit" class="btn-def btn-def-gre2">Send<i class="fa fa-envelope envelope__ico" aria-hidden="true"></i></button>
                     </form>
 
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-                    <div class="contactUsTouch">
+                    {{--  <div class="contactUsTouch">
                         <h4>Get In Touch</h4>
                         
                         <p>{{$contact->description}}</p>
-                    </div>
+                    </div>  --}}
 
                     <div class="contactUsDetails">
                         <h4>Contact Details</h4>
-                        
                         <ul>
-                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{$contact->address}}</span></li>
-                            <li><i class="fa fa-phone" aria-hidden="true"></i><span>{{$contact->phone}}</span></li>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i><span>{{$contact->email}}</span></li>
+                            {{--  <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{$contact->address}}</span></li>  --}}
+                            <a href="tel:+16505752151" class="phone phone__modOne"><li><i class="fa fa-phone" aria-hidden="true"></i><span class="fs">{{$contact->phone}}</span></li></a>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><span class="fs">{{$contact->email}}</span></li>
                         </ul>
                     </div>
                     <div class="contactUsSocial">
                         <h4>Social Media</h4>
+                        <ul>
+                            <a href=""><li><i class="fa fa-3x fa-facebook-square social__button social__button--fb" aria-hidden="true"></i></li></a>
+                            <a href=""><li><i class="fa fa-3x fa-twitter-square social__button social__button--tw" aria-hidden="true"></i></li></a>
+                            <a href=""><li><i class="fa fa-3x fa-google-plus-square social__button social__button--gp" aria-hidden="true"></i></li></a>                            
+                        </ul>
                         <ul>
                             @foreach ($socials as $social)
                             <li><a href=""><i class="{{$social->icon}}" aria-hidden="true"></i></a></li>
