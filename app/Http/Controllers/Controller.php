@@ -16,7 +16,7 @@ class Controller extends BaseController
     {
         MetaTag::set('title', 'This is a detail page');
         MetaTag::set('description', 'All about this detail page');
-        MetaTag::set('keywords', 'ovt oracle');
+        MetaTag::set('keywords', 'taxi');
         MetaTag::set('image', asset('images/detail-logo.png'));
     }
     protected function uploadImage(Request $request,$fileName,$uploadPath,$model,$imageColumnNameFromDb)

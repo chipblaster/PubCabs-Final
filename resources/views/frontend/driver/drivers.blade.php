@@ -1,4 +1,5 @@
 @extends("layouts.frontend")
+@section('title','Drivers')
 @section("content")
 @include("frontend.partials.menu")
 @foreach ($drivers->sortByDesc('id') as $key => $driver)
@@ -15,12 +16,12 @@
                </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
-                <div class="aboutUsImage" style="background:url({{asset('assets/upload/'.$driver->banner_img)}});">
+                <div class="aboutUsImage" style="background:url({{asset('assets/upload/'.$driver->banner_img)}}); background-size: cover">
                </div>
             </div>
             @else
             <div class="col-md-6 nopadding">
-               <div class="driversUsImage" style="background:url({{asset('assets/upload/'.$driver->banner_img)}});">
+               <div class="driversUsImage" style="background:url({{asset('assets/upload/'.$driver->banner_img)}});background-size: cover">
                </div>
             </div>
             <div class="col-md-6 nopadding">

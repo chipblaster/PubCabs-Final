@@ -8,8 +8,9 @@
                     </div>
                     <div class="footer__body">
                         <p class="footer__bodyText">
-                            {{substr($about->description,0,552)}}
+                            {{substr($about->description,0,152)}}
                         </p>
+                        <a href="{{route('about')}}" class="btn-def btn-def-yel">Learn More</a>
                     </div>
                 </div>
             </div>
