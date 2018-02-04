@@ -65,20 +65,15 @@
                         <h4>Contact Details</h4>
                         <ul>
                             {{--  <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{$contact->address}}</span></li>  --}}
-                            <a href="tel:+16505752151" class="phone phone__modOne"><li><i class="fa fa-phone" aria-hidden="true"></i><span class="fs">{{$contact->phone}}</span></li></a>
+                            <a href="tel:{{$contact->phone}}" class="phone phone__modOne"><li><i class="fa fa-phone" aria-hidden="true"></i><span class="fs">{{$contact->phone}}</span></li></a>
                             <li><i class="fa fa-envelope" aria-hidden="true"></i><span class="fs">{{$contact->email}}</span></li>
                         </ul>
                     </div>
                     <div class="contactUsSocial">
                         <h4>Social Media</h4>
                         <ul>
-                            <a href=""><li><i class="fa fa-3x fa-facebook-square social__button social__button--fb" aria-hidden="true"></i></li></a>
-                            <a href=""><li><i class="fa fa-3x fa-twitter-square social__button social__button--tw" aria-hidden="true"></i></li></a>
-                            <a href=""><li><i class="fa fa-3x fa-google-plus-square social__button social__button--gp" aria-hidden="true"></i></li></a>                            
-                        </ul>
-                        <ul>
                             @foreach ($socials as $social)
-                            <li><a href=""><i class="{{$social->icon}}" aria-hidden="true"></i></a></li>
+                                <a href="{{$social->url}}" target="_blank"><li><i class="fa-3x {{$social->icon}}-square social__button" aria-hidden="true"></i></li></a>
                             @endforeach
                         </ul>
                     </div>
