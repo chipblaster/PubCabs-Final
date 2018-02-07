@@ -11,10 +11,8 @@
             </div>
         </div>
     </div>
-
 </section>
 <!-- CONTACTUS SECTION END -->
-
 <section id="" class="contactUsForm">
     <div class="container">
         <div class="row">
@@ -50,9 +48,7 @@
                         </div>
                         <button type="submit" class="btn-def btn-def-gre2">Send<i class="fa fa-envelope envelope__ico" aria-hidden="true"></i></button>
                     </form>
-
                 </div>
-
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                     {{--  <div class="contactUsTouch">
