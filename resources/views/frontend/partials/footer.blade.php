@@ -11,6 +11,7 @@
                             {{substr($about->description,0,152)}}
                         </p>
                         <a href="{{route('about')}}" class="btn-def btn-def-gre">Learn More</a>
+
                     </div>
                 </div>
             </div>
