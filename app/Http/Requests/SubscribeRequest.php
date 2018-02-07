@@ -28,9 +28,8 @@ class SubscribeRequest extends FormRequest
             'last_name' => 'required|string|max:255',
             'phone' => 'required|string|max:255',
             'country_id' => 'required|integer|max:255',
-            'zip_code' => 'required|integer|max:255',
-            'type' => 'required|boolean',
-            'email' => 'required|string|email|max:255',
+            'zip_code' => 'required|max:255',
+            'email' => 'required|string|email|max:255|unique:subscribes',
         ];
     }
 }

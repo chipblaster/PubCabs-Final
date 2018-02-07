@@ -3,7 +3,7 @@
 @section('content')
 @include("frontend.partials.menu")
     <!-- ABOUT SECTION BEGIN -->
-    <section id="" class="About" style="background:url('{{asset('assets/images/image28.jpg')}}')">
+    <section id="" class="About">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="AboutContent">

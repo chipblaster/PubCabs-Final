@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('title','Pubcabs')
 @section('content')
-    @include('frontend.partials.menu')
+@include('frontend.partials.menu')
 <!-- SLOGAN BEGIN -->
 <section id="" class="content" style="background-image :url(./assets/images/4.jpg);background-repeat:no-repeat;">
   <div class="container">
@@ -16,6 +16,12 @@
                       <div class="alert alert-success">
                           <a class="close" data-dismiss="alert">×</a>
                           <strong>{{ session('status') }}</strong>
+                      </div>
+                     @endif
+                           @if($errors->has('email'))
+                      <div class="alert alert-warning">
+                          <a class="close" data-dismiss="alert">×</a>
+                          <strong>{{ $errors->first('email')  }}</strong>
                       </div>
                      @endif
                        <ul class="nav nav-tabs row" role="tablist">
@@ -151,7 +157,7 @@
           </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
-          <div class="aboutUsImage" style="background:url({{asset('assets/images/'.$about->banner_img)}});">
+          <div class="aboutUsImage" style="background:url({{asset('assets/upload/'.$about->banner_img)}}); background-size: cover">
 
           </div>
         </div>
@@ -188,7 +194,7 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 nopadding">
-        <div class="driversUsImage" style="background:url('{{asset('assets/upload/'.$driver->banner_img)}}');"></div>
+        <div class="driversUsImage" style="background:url('{{asset('assets/upload/'.$driver->banner_img)}}'); background-size: cover"></div>
       </div>
       <div class="col-md-6 nopadding">
         <div class="driverUsInfo">
@@ -203,6 +209,29 @@
   <div class="clearfix"></div>
 </div>
 @endif
+    @if($rider)
+        <div id="" class="aboutUs">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
+                            <div class="aboutUsInfo">
+                                <h3>{{$rider->title}}</h3>
+                                <p>{{substr($rider->description,0,221)}}</p>
+                                <a href="{{route('rider_single',['id' => $rider->id])}}" class="btn-def btn-def-yel">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
+                            <div class="aboutUsImage" style="background:url({{asset('assets/upload/'.$rider->banner_img)}}); background-size: cover">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
 
 </section>

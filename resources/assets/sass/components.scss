@@ -71,6 +71,15 @@ body {
     text-decoration: none;
   }
 }
+.email{
+  &__modOne{
+    color: white;
+  }
+  &__modOne:hover{
+    color: white;
+    text-decoration: none;
+  }
+}
 .envelope__ico {
   margin-left: 10px;
 }

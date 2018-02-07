@@ -34,17 +34,20 @@ class SubscribeController extends Controller
         $subscribes=Subscribe::find($request->id);
         foreach ($subscribes as $key => $subscribe) 
         {
-            $data = array(
-            'text' => $request->message, 
-            'name' => $subscribe->first_name, 
-            );
+            if ($subscribe->is_block == 0)
+            {
+                $data = array(
+                    'text' => $request->message,
+                    'first_name' => $subscribe->first_name,
+                    'last_name' => $subscribe->last_name,
+                );
 
-            Mail::send('backend.subscribe.email', $data, function($message) use ($subscribe) {
-            $message->to($subscribe->email, 'PubCap')
-                     ->subject("PubCabs");
-            $message->from("demo@admin.com","PubCap");
-
-            });
+                Mail::send('backend.subscribe.email', $data, function($message) use ($subscribe) {
+                    $message->to($subscribe->email, 'PubCap')
+                        ->subject("PubCabs");
+                    $message->from("info@pubcabs.co","PubCap");
+                });
+            }
             if( count(Mail::failures()) > 0 ) 
             {
                 foreach(Mail::failures as $email_address) 

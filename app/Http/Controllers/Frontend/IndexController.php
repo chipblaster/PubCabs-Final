@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Http\Requests\SubscribeRequest;
+use App\Models\Rider;
 use Mail;
 use App\Models\About;
 use App\Models\Contact;
@@ -23,8 +24,9 @@ class IndexController extends Controller
         $about = About::all()->first();
         $contact=Contact::all()->first();
         $driver=Driver::all()->last();
+        $rider = Rider::all()->last();
         $countries=Country::all();
-        return view('frontend.index',compact('about','contact','driver','countries'));
+        return view('frontend.index',compact('about','contact','driver','countries','rider'));
     }
 
 
@@ -53,6 +55,14 @@ class IndexController extends Controller
     {
         $request->merge(['is_block' => 0]);
         Subscribe::create($request->all());
+        $data = array(
+            'email' => $request->email,
+        );
+        Mail::send('email.subscribe_email',$data, function($message) use($request) {
+            $message->to($request->email, 'from pubcabs')
+                ->subject("PubCaps");
+            $message->from('info@pubcabs.com',"PubCaps");
+        });
         $request->session()->flash('status', 'You was subscribed successfully  !');
         return back();
     }

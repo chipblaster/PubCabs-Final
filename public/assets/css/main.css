@@ -1169,6 +1169,15 @@ body {
   text-decoration: none;
 }
 
+.email__modOne {
+  color: white;
+}
+
+.email__modOne:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .envelope__ico {
   margin-left: 10px;
 }
