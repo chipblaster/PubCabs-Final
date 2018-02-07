@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('title','Pubcabs')
 @section('content')
-    @include('frontend.partials.menu')
+@include('frontend.partials.menu')
 <!-- SLOGAN BEGIN -->
 <section id="" class="content" style="background-image :url(./assets/images/4.jpg);background-repeat:no-repeat;">
   <div class="container">

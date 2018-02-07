@@ -10,7 +10,8 @@
                         <p class="footer__bodyText">
                             {{substr($about->description,0,152)}}
                         </p>
-                        <a href="{{route('about')}}" class="btn-def btn-def-yel">Learn More</a>
+                        <a href="{{route('about')}}" class="btn-def btn-def-gre">Learn More</a>
+
                     </div>
                 </div>
             </div>
@@ -43,16 +44,16 @@
                             </div> -->
                     <div class="col-md-12">
                         <ul class="footer__listSection phone-icon">
-
-                            <a href="tel:+16505752151" class="phone phone__modTwo">
                                 <li class="footer__listRow">{{$contact->phone}}</li>
-                            </a>
                             <li class="footer__listRow">Mon - Fri, 9.00am until 6.30pm</li>
                         </ul>
                     </div>
                     <div class="col-md-12">
                         <ul class="footer__listSection mail-icon">
-                            <li class="footer__listRow">{{$contact->email}}</li>
+                            
+                            <a href="{{route('contact')}}" class="email email__modOne">
+                                    <li class="footer__listRow">{{$contact->email}}</li>
+                            </a>
                             <li class="footer__listRow">We reply within 24 hrs</li>
                         </ul>
                     </div>
