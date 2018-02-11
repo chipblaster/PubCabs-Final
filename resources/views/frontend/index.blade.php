@@ -200,7 +200,7 @@
         <div class="driverUsInfo">
             <h3>{{$driver->title}}</h3>
             <p>{{substr($driver->description,0,200)}}...</p>
-            <a href="{{route('drivers')}}" class="btn-def btn-def-yel">Learn More</a>
+            <a href="{{route('driver_single',['id' => $driver->id])}}" class="btn-def btn-def-yel">Learn More</a>
         </div>
       </div>
       

@@ -15,7 +15,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $drivers=Driver::all();
+        $drivers=Driver::where('id','>',1)->get();
         return view("frontend.driver.drivers",compact('drivers'));
     }
 

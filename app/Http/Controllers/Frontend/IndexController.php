@@ -23,8 +23,8 @@ class IndexController extends Controller
     {
         $about = About::all()->first();
         $contact=Contact::all()->first();
-        $driver=Driver::all()->last();
-        $rider = Rider::all()->last();
+        $driver=Driver::where('id',1)->first();
+        $rider = Rider::where('id',1)->first();
         $countries=Country::all();
         return view('frontend.index',compact('about','contact','driver','countries','rider'));
     }
@@ -79,8 +79,8 @@ class IndexController extends Controller
         );
         Mail::send('email.email', $data, function($message) use($request) {
             $message->to('galib.khaliloglu@gmail.com', 'from pubcabs')
-                     ->subject("PubCap User");
-            $message->from($request->email,"PubCap");
+                     ->subject("PubCaps User");
+            $message->from($request->email,"PubCaps");
         });
         
         $request->session()->flash('status', 'Email was sent successfully!');

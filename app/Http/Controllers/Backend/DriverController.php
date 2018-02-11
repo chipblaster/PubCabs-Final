@@ -98,7 +98,7 @@ class DriverController extends Controller
      */
     public function destroy(Driver $driver)
     {
-        $driver->delete($driver->id);
+        ($driver->id != 1) ?  $driver->delete($driver->id) : '';
         return back();
     }
 }

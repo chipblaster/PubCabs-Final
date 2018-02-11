@@ -98,7 +98,7 @@ class RiderController extends Controller
      */
     public function destroy(Rider $rider)
     {
-        $rider->delete($rider->id);
+        ($rider->id != 1) ?  $rider->delete($rider->id) : '';
         return back();
     }
 }

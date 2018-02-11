@@ -1,6 +1,6 @@
 
- <p>İsmaric <strong>{{ $name }} -dən</strong></p>
+ <p>From: <strong>{{ $name }} </strong></p>
  <p>Email : <strong>{{ $email }}</strong></p>
- <p>İsmarıcın mövzusu : <strong>{{ $subject }}</strong> </p>
- İsmaric :
+ <p>Subject : <strong>{{ $subject }}</strong> </p>
+ Message : </br>
 <p>{{ $text }}</p>
