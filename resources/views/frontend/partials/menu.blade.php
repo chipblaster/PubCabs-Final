@@ -1,17 +1,9 @@
-
 <!-- LOGO BEGIN -->
-
 <section class="container">
     <div class="row">
-        
-            <a href="{{url('/')}}">
-                    {{--  <div class="brand" style="width:100%;background-image: url('/assets/images/logo.png')">
-                        
-                    <div class="logo" ></div>
-                </div>    --}}
+            <a href="{{route('index')}}">
                 <img src="{{ url('/assets/images/logo.png')}}" alt="" class="pubLogo">      
             </a>
-        
     </div>
 </section>
 <!-- LOGO END -->
@@ -38,5 +30,4 @@
     </div><!--/.container -->
 </div><!--/.navbar -->
 </div>
-
 <!-- Fixed navbar end -->

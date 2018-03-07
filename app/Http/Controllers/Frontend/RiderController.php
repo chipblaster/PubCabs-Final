@@ -15,7 +15,7 @@ class RiderController extends Controller
      */
     public function index()
     {
-        $riders=Rider::all();
+        $riders=Rider::where('id','>',1)->get();
         return view('frontend.rider.riders',compact('riders'));
     }
 
