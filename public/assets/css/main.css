@@ -1018,6 +1018,11 @@ li.dropdown-header.megaheader {
   color: white;
 }
 
+.pubLogo {
+  width: 32%;
+  margin-left: 32%;
+}
+
 .footer {
   background: #333;
 }

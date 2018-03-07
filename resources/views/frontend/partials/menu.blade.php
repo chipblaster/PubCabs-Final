@@ -1,15 +1,17 @@
 
 <!-- LOGO BEGIN -->
 
-<section id="logo" class="container">
+<section class="container">
     <div class="row">
-        <div class="col-l-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        
             <a href="{{url('/')}}">
-                <div class="logo">
-                    <h2>Logo</h2>
-                </div>
+                    {{--  <div class="brand" style="width:100%;background-image: url('/assets/images/logo.png')">
+                        
+                    <div class="logo" ></div>
+                </div>    --}}
+                <img src="{{ url('/assets/images/logo.png')}}" alt="" class="pubLogo">      
             </a>
-        </div>
+        
     </div>
 </section>
 <!-- LOGO END -->
