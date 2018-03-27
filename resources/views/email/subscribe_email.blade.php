@@ -10,7 +10,7 @@
         <p>&nbsp;</p>
         <p><a href="{{env('APP_URL')}}" style="text-decoration:none;font-family:Verdana, Geneva, sans-serif;font-weight: bold; color: #3D3D3D;font-size: 15px;">pubcabs.com</a></p>
         <hr style="margin-top:10px;margin-bottom:65px;border:none;border-bottom:1px solid red;"/>
-        <h1 style="font-family: Tahoma, Geneva, sans-serif; font-weight: normal; color: #2A2A2A; text-align: center; margin-bottom: 65px;font-size: 20px; letter-spacing: 6px;font-weight: normal; border: 2px solid black; padding: 15px;">THANKS FOR SUBSCRIBE!</h1>
+        <h1 style="font-family: Tahoma, Geneva, sans-serif; font-weight: normal; color: #2A2A2A; text-align: center; margin-bottom: 65px;font-size: 20px; letter-spacing: 6px;font-weight: normal; border: 2px solid black; padding: 15px;">Thank you for subscription. We will be in touch with your shortly</h1>
         <table style="width:100%;">
             <th>
             <td style="width:25%;"></td>

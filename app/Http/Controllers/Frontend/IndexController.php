@@ -63,7 +63,7 @@ class IndexController extends Controller
                 ->subject("PubCaps");
             $message->from('info@pubcabs.com',"PubCaps");
         });
-        $request->session()->flash('status', 'You was subscribed successfully  !');
+        $request->session()->flash('status', 'You are subscribed successfully.');
         return back();
     }
 
